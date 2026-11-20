@@ -1,0 +1,1 @@
+- implement the page trio outlined in `docs/1120-happycamper-html-demo.md`
