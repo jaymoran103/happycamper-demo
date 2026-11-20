@@ -2,3 +2,7 @@
 tools/demo-build/out/
 tools/demo-build/shots/
 *.class
+
+# Pausing tracking until output proves itself
+AGENTS.md
+docs/1120-happycamper-html-demo.md
