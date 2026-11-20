@@ -2,7 +2,7 @@
 
 A schedule management app for summer camps. 
 
-See [the live site](eelslap.com) for the 2026 distribution, an in-browser demo, and how the app details.
+See [the live site](https://eelslap.com) for the 2026 distribution, an in-browser demo, and how the app details.
 
 See sections below for info on this repo and related codebases.
 
