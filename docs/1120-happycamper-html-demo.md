@@ -37,8 +37,7 @@ simple AI disclosure: make clear that the original version was written 100% by h
 AI systems have never come into contact with the original demo data, all test data in the codebase was written by hand, or anonymized with a tool like jaymoran103/nameswap before joining version control. 
 
 
-## Tone
-Avoid punchy slogans or overselling any point here. This is a modest yet powerful tool that does not need to advertise itself. The ethos of this page is that the design, implementation, and utility
- stand for themselves, this page simply gives the accessible elevator pitch and points the user to a place they can learn more
+## Commuication Style
+Avoid punchy slogans or overselling any point here. This is a modest yet powerful tool that does not need to advertise itself. The ethos of this page is that the design, implementation, and utility stand for themselves, this page simply gives the accessible elevator pitch and points the user to a place they can learn more. 
 
-The stack and model of use Are very well thought through, we want to emphasize these as trustworthy selling points, without sounding like an agent Is throwing every possible fact to impress someone. This is a modest yet powerful tool that does not need to advertise itself. The ethos of this page is that the design, implementation, and utility stand for themselves, this page simply gives the accessible elevator pitch and points the user to a place they can learn more. I've invested a full hour into well written descriptions and statements of intent, Please match my brevity and human oriented writing style, avoiding agentic padding and repetition of points.
+I've invested a full hour into well written descriptions and statements of intent, further writing should match my human oriented writing style and brevity, avoiding agentic padding or repetition of points.
