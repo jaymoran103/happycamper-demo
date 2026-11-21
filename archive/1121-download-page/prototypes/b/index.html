@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../../1120-page-trio/prototypes/a/site.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 1.25rem 3rem; background: var(--paper); color: var(--ink); font: 16px/1.6 Verdana, Geneva, sans-serif; }
+  a { color: var(--accent-dark); }
+  :focus-visible { outline: 3px solid #2b68b8; outline-offset: 2px; }
+  .page { width: min(44rem, 100%); margin: 0 auto; }
+
+  .version { margin: 0 0 .4rem; font-size: .95rem; font-weight: 700; color: var(--accent-dark); }
+  details.whatsnew { margin: 0 0 1rem; }
+  details.whatsnew summary { display: inline-flex; align-items: center; gap: .35rem; font-size: .78rem; font-weight: 700;
+    color: var(--accent-dark); background: rgba(47,115,64,.08); border: 1px solid rgba(47,115,64,.3); border-radius: 999px;
+    padding: .22rem .85rem; cursor: pointer; list-style: none; user-select: none; }
+  details.whatsnew summary:hover { background: rgba(47,115,64,.16); }
+  details.whatsnew summary::-webkit-details-marker { display: none; }
+  details.whatsnew summary::after { content: "▸"; font-size: .65rem; }
+  details.whatsnew[open] summary::after { content: "▾"; }
+  details.whatsnew ul { list-style: none; margin: .5rem 0 0; padding: .7rem 1rem; background: rgba(255,255,255,.5); border: 1px solid var(--line); border-radius: 10px; }
+  details.whatsnew li { position: relative; padding-left: 1.2rem; margin: .25rem 0; font-size: .9rem; line-height: 1.45; }
+  details.whatsnew li::before { content: "+"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+  .card { margin-top: 1.5rem; padding: 1.4rem 1.5rem; background: var(--card); border: 2px solid var(--accent); border-radius: 12px; }
+  .pick { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem; }
+  .pick label { font-weight: 700; font-size: .9rem; }
+  .pick select { font: inherit; font-size: .9rem; padding: .3rem .4rem; border: 1px solid #8aa58a; border-radius: 6px; background: #fff; color: var(--ink); }
+  a.button { display: inline-block; margin-top: 1rem; padding: .65rem 1.4rem; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+  a.button:hover { background: var(--accent-dark); }
+  .file { margin: .4rem 0 0; font-size: .78rem; color: #6b7a6e; }
+
+  details.steps { margin-top: 1.1rem; border-top: 1px solid #dfe9dd; padding-top: .9rem; }
+  details.steps summary { cursor: pointer; font-weight: 700; color: var(--accent-dark); }
+  details.steps ol { margin: .7rem 0 0; padding-left: 1.4rem; }
+  details.steps li { margin: .35rem 0; line-height: 1.5; }
+  .why { margin: .9rem 0 0; padding: .8rem 1rem; font-size: .88rem; line-height: 1.5; background: #f1f6ef; border-radius: 8px; }
+  .hint { margin: .8rem 0 0; font-size: .82rem; color: var(--soft); }
+
+  .try { margin-top: 1.5rem; padding: 1.2rem 1.5rem; background: #eef5fb; border: 2px solid #b8d0e6; border-radius: 12px; }
+  .try p { margin: 0; }
+  .try .pair { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .9rem; }
+  .try a.button { margin: 0; background: #2b68b8; }
+  .try a.button:hover { background: #1f649c; }
+  .try a.button.quiet { background: #fff; color: #2f568a; border: 1px solid #b8d0e6; }
+  .try a.button.quiet:hover { background: #f6faff; }
+  .more { margin: 1.5rem 0 0; font-size: .92rem; }
+
+  /* Round chrome: the ui-iterator letter strip. Not part of the site. */
+  .proto-bar { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; margin: 0 -1.25rem; padding: .35rem 1.25rem; font: 12px/1.4 system-ui, sans-serif; background: #22302a; color: #dfe9dd; }
+  .proto-bar span { flex: 1; min-width: 12rem; opacity: .75; }
+  .proto-bar nav { display: flex; gap: .3rem; }
+  .proto-bar a { color: #fff; padding: 0 .4rem; border-radius: 3px; }
+  .proto-bar a[aria-current] { background: rgba(255,255,255,.18); }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>B · Trio A</b>
+  <span>The current redesign from 1120-page-trio: one white card with an OS dropdown, a collapsible five-step list, a reassurance box and a blue try box.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="index.html" aria-current="page" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<div class="pairbar"><nav class="pair" aria-label="HappyCamper pages"><span aria-current="page">Download</span><a href="../../../1120-page-trio/prototypes/a/demo.html">Demo</a><a href="../../../1120-page-trio/prototypes/j/codebase.html">Codebase</a></nav></div>
+<div class="page">
+  <header class="sitehead">
+    <img src="../../icon.png" alt="HappyCamper logo">
+    <h1>HappyCamper</h1>
+  </header>
+
+  <main>
+    <div class="overview">
+      <h2 class="headline">Download the app</h2>
+      <p class="version"><span id="version">Version 2.5.0</span><span id="reldate"></span></p>
+      <details class="whatsnew" id="whatsnew">
+        <summary>See what's new in <span id="whatsnew-label"></span></summary>
+        <ul id="whatsnew-list"></ul>
+      </details>
+      <p>Analyze activity assignments, catch oversights, and measure preference satisfaction.</p>
+    </div>
+
+    <div class="card">
+      <div class="pick">
+        <label for="os">Your computer</label>
+        <select id="os">
+          <option value="mac-arm">Mac, Apple Silicon (2021+)</option>
+          <option value="mac-intel">Mac, Intel (pre-2021)</option>
+          <option value="windows">Windows 10 or 11</option>
+          <option value="linux">Linux, Debian or Ubuntu</option>
+        </select>
+      </div>
+
+      <div class="os" data-os="mac-arm">
+        <a class="button" href="https://github.com/jaymoran103/happycamper-heart/releases/latest/download/HappyCamper-macos-arm64.dmg">Download for Mac</a>
+        <p class="file">HappyCamper-macos-arm64.dmg</p>
+      </div>
+      <div class="os" data-os="mac-intel">
+        <a class="button" href="https://github.com/jaymoran103/happycamper-heart/releases/latest/download/HappyCamper-macos-intel.dmg">Download for Mac</a>
+        <p class="file">HappyCamper-macos-intel.dmg</p>
+      </div>
+      <div class="os" data-os="windows">
+        <a class="button" href="https://github.com/jaymoran103/happycamper-heart/releases/latest/download/HappyCamper-windows.msi">Download for Windows</a>
+        <p class="file">HappyCamper-windows.msi</p>
+      </div>
+      <div class="os" data-os="linux">
+        <a class="button" href="https://github.com/jaymoran103/happycamper-heart/releases/latest/download/HappyCamper-linux.deb">Download for Linux</a>
+        <p class="file">HappyCamper-linux.deb</p>
+      </div>
+
+      <details class="steps">
+        <summary>How to install</summary>
+
+        <div class="os" data-os="mac-arm mac-intel">
+          <ol>
+            <li>Double-click the downloaded .dmg file to open it.</li>
+            <li>Drag HappyCamper into the Applications folder.</li>
+            <li>Open HappyCamper from Applications. macOS will say it can't verify the app. Click Done.</li>
+            <li>Open System Settings &rsaquo; Privacy &amp; Security, scroll down, and click Open Anyway next to the HappyCamper message. Enter your password if asked.</li>
+            <li>HappyCamper opens, and opens normally from then on.</li>
+          </ol>
+          <p class="why">macOS asks this about any app that isn't from the App Store, and only the first time. Apple explains it in <a href="https://support.apple.com/en-us/102445">Open a Mac app from an unknown developer</a>. All of HappyCamper's code is public, and the <a href="../../../1120-page-trio/prototypes/j/codebase.html">codebase page</a> explains what it does.</p>
+          <p class="hint">Not sure which Mac you have? Open the Apple menu &rsaquo; About This Mac. A Chip line that starts with Apple means Apple Silicon. A Processor line that says Intel means Intel.</p>
+        </div>
+
+        <div class="os" data-os="windows">
+          <ol>
+            <li>Double-click the downloaded .msi file.</li>
+            <li>If Windows says "Windows protected your PC", click More info, then Run anyway.</li>
+            <li>Finish the installer, then open HappyCamper from the Start menu.</li>
+          </ol>
+          <p class="why">Windows shows this for apps that haven't built up a download history with Microsoft, which is normal for small independent apps. Microsoft explains it in <a href="https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation">SmartScreen reputation</a>. All of HappyCamper's code is public, and the <a href="../../../1120-page-trio/prototypes/j/codebase.html">codebase page</a> explains what it does.</p>
+        </div>
+
+        <div class="os" data-os="linux">
+          <ol>
+            <li>Double-click the downloaded .deb file to open your software installer, then click Install. Or, from the download folder in a terminal, run <code>sudo apt install ./HappyCamper-linux.deb</code>.</li>
+            <li>Enter your password if asked.</li>
+            <li>Open HappyCamper from your applications menu.</li>
+          </ol>
+          <p class="why">Linux has no extra warning step. Ubuntu's <a href="https://ubuntu.com/server/docs/how-to/software/package-management/">package guide</a> covers installing .deb files. All of HappyCamper's code is public, and the <a href="../../../1120-page-trio/prototypes/j/codebase.html">codebase page</a> explains what it does.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="try">
+      <p>Test the real app with sample rosters, or skip the download and try the web demo.</p>
+      <div class="pair">
+        <a class="button" href="https://github.com/jaymoran103/happycamper-heart/releases/latest/download/HappyCamper-demo-data.zip">Download sample rosters</a>
+        <a class="button quiet" href="../../../1120-page-trio/prototypes/a/demo.html">Open the web demo</a>
+      </div>
+    </div>
+
+    <p class="more">How it's built, and what it does with your data: <a href="../../../1120-page-trio/prototypes/j/codebase.html">the codebase page</a>.</p>
+  </main>
+
+  <footer class="sitefoot">
+    <div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a> &middot; Hit up <a href="mailto:jaymorandev@gmail.com">jaymorandev@gmail.com</a> for more info!</div>
+    <div>
+      <a href="https://github.com/jaymoran103/happycamper-heart">Source &amp; documentation</a> &middot;
+      <a href="https://github.com/jaymoran103/happycamper-heart/releases">All releases</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Show only the chosen OS. Mac arch can't be read reliably from the browser,
+  // so a Mac defaults to Apple Silicon, the common case.
+  (function () {
+    var select = document.getElementById("os");
+    var p = navigator.platform || "", ua = navigator.userAgent || "";
+    var guess = /Win/.test(p) ? "windows" : /Mac/.test(p) ? "mac-arm" : /Linux/.test(p) && !/Android/.test(ua) ? "linux" : null;
+    if (guess) select.value = guess;
+    function show() {
+      document.querySelectorAll(".os").forEach(function (el) {
+        el.hidden = el.dataset.os.split(" ").indexOf(select.value) < 0;
+      });
+    }
+    select.addEventListener("change", show);
+    show();
+  })();
+
+  // Version and date come from the latest GitHub release.
+  fetch("https://api.github.com/repos/jaymoran103/happycamper-heart/releases/latest")
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var v = (d.tag_name || "").replace(/^v/, "");
+      if (!v) return;
+      document.getElementById("version").textContent = "Version " + v;
+      if (d.published_at) {
+        document.getElementById("reldate").textContent = " – " + new Date(d.published_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+      }
+    })
+    .catch(function () {});
+
+  fetch("../../whatsnew.json")
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      document.getElementById("whatsnew-label").textContent = d.label || "";
+      var list = document.getElementById("whatsnew-list");
+      (d.items || []).forEach(function (text) {
+        var li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+      });
+    })
+    .catch(function () { document.getElementById("whatsnew").hidden = true; });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Shared by prototypes C onward: J's header bar and footer, the page column,
+ * and the round's letter strip. Each prototype overrides the tokens. */
+:root {
+  --bar: #1a672c; --bar-ink: #ffffff;
+  --page: #cfe3c9; --ink: #26302a; --soft: #43524a; --faint: #5f6f63;
+  --accent: #1a672c; --accent-ink: #ffffff; --link: #2f7340;
+  --panel: #bbd6b4; --panel-edge: #a3c49b; --well: #e3f0df;
+  --web: #2b68b8;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--page); }
+body { margin: 0; color: var(--ink); font: 16px/1.6 Verdana, Geneva, sans-serif; }
+a { color: var(--link); }
+:focus-visible { outline: 3px solid #2b68b8; outline-offset: 2px; }
+.page { width: min(46rem, 100%); margin: 0 auto; padding: 0 1.25rem 3rem; }
+.ic { display: inline-block; vertical-align: middle; }
+h1 { margin: 2.25rem 0 0; font-size: 1.9rem; line-height: 1.2; }
+code { font-size: .85em; background: rgba(0,0,0,.07); padding: .05rem .3rem; border-radius: 4px; }
+
+/* J's header bar */
+.bar { position: sticky; top: 0; z-index: 10; background: var(--bar); box-shadow: 0 2px 8px rgba(20,60,30,.25); }
+.bar .in { width: min(1120px, 100%); margin: 0 auto; padding: .5rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.bar .home { display: flex; align-items: center; gap: .6rem; color: var(--bar-ink); text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.bar .home img { width: 36px; height: 36px; }
+.bar nav { display: flex; gap: .35rem; font-size: .82rem; font-weight: 700; }
+.bar nav a, .bar nav span { padding: .3rem .85rem; border-radius: 999px; text-decoration: none; }
+.bar nav a { color: var(--bar-ink); border: 1px solid rgba(255,255,255,.45); }
+.bar nav a:hover { background: rgba(255,255,255,.15); }
+.bar nav span { color: var(--bar); background: #fff; border: 1px solid #fff; }
+@media (max-width: 520px) { .bar .home span { display: none; } .bar nav a, .bar nav span { padding: .25rem .6rem; } }
+
+/* J's footer */
+footer.sitefoot { margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .85rem; color: var(--soft); }
+footer.sitefoot a { color: inherit; }
+footer.sitefoot div + div { margin-top: .6rem; }
+.footpills { display: inline-flex; gap: .35rem; font-size: .82rem; font-weight: 700; }
+footer.sitefoot .footpills a { padding: .2rem .85rem; border-radius: 999px; text-decoration: none; color: var(--link); border: 1px solid var(--link); }
+footer.sitefoot .footpills a:hover { color: var(--page); background: var(--link); }
+
+/* What's new: the pill from the original page */
+details.whatsnew summary { display: inline-flex; align-items: center; gap: .35rem; font-size: .78rem; font-weight: 700; color: var(--link);
+  border: 1px solid currentColor; border-radius: 999px; padding: .15rem .8rem; cursor: pointer; list-style: none; user-select: none; }
+details.whatsnew summary::-webkit-details-marker { display: none; }
+details.whatsnew summary::after { content: "▸"; font-size: .65rem; }
+details.whatsnew[open] summary::after { content: "▾"; }
+details.whatsnew ul { list-style: none; margin: .5rem 0 0; padding: 0; }
+details.whatsnew li { position: relative; padding-left: 1.2rem; margin: .2rem 0; font-size: .88rem; line-height: 1.45; }
+details.whatsnew li::before { content: "+"; position: absolute; left: 0; color: var(--link); font-weight: 700; }
+
+/* Round chrome: the ui-iterator letter strip. Not part of the site. */
+.proto-bar { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; padding: .35rem 1.25rem; font: 12px/1.4 system-ui, sans-serif; background: #22302a; color: #dfe9dd; }
+.proto-bar span { flex: 1; min-width: 12rem; opacity: .75; }
+.proto-bar nav { display: flex; gap: .3rem; }
+.proto-bar a { color: #fff; padding: 0 .4rem; border-radius: 3px; }
+.proto-bar a[aria-current] { background: rgba(255,255,255,.18); }

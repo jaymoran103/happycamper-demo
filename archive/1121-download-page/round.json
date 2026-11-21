@@ -1,0 +1,278 @@
+{
+  "round": "1121-download-page",
+  "title": "HappyCamper download page",
+  "surface": "site/index.html: the download page",
+  "question": "How does the download page get someone from landing to a running app with less text, emphasizing their likely OS and disclosing the rest on request?",
+  "rules": "docs/site-ui-rules.md",
+  "stylesheet": "shell.css",
+  "script": "shell.js",
+  "settled": [
+    "The download page is the hub. There is no separate landing page.",
+    "The page guesses the visitor's OS and offers the others in a picker.",
+    "Each OS gets one download button and its own install steps. Steps for other systems stay hidden.",
+    "The Apple Silicon steps are the model: download, open the .dmg, drag to Applications, open it, allow it once, then it opens normally.",
+    "The gatekeeper note says the warning is normal for apps outside the store, links the vendor's own guide, and points to Details.",
+    "What's new stays as the single 2.5 pill.",
+    "The page uses J's green paper, header bar and footer. Blue is the only second hue.",
+    "A's centered hero opens the page: logo, 'HappyCamper', the version and date, and the What's new pill. No tagline.",
+    "G's step band shows the install: one pictogram and a short caption per step.",
+    "The separate try-it section is gone. The header's Demo route is the only web demo link.",
+    "The OS picker is M's row: the likely module takes the width and the others shrink to a one- or two-word label. Versions and the 2021 threshold appear only once a module opens.",
+    "The macOS note reads: 'macOS requires these steps for any app not on the App Store. See Apple's guide for details. HappyCamper's code is open-source, learn more here.'",
+    "The bottom of the page is P's signpost cards: Demo in blue, Details in green, one line each, and the footer keeps only the credit.",
+    "The bottom cards read: Download demo rosters, 'Four sets of sample rosters to demo in the app.'; In-browser demo, 'The quickest look at HappyCamper's core features.'; Details, 'How the app is built, and how data is used.'"
+  ],
+  "open": [
+    "The install steps for each OS haven't been checked against a real install."
+  ],
+  "iterations": [
+    {
+      "id": "A",
+      "file": "prototypes/a/index.html",
+      "name": "Original",
+      "tried": "The live page before the trio: logo and title centered, four OS cards in a row with a recommended badge, one-line notes, and a sample data card. Pale paper and white cards.",
+      "verdict": "superseded",
+      "why": "The reference Jay prefers: modular, low text density.",
+      "contributed": [
+        "four OS modules",
+        "low text density"
+      ],
+      "followed_by": [
+        "C",
+        "G"
+      ]
+    },
+    {
+      "id": "B",
+      "file": "prototypes/b/index.html",
+      "name": "Trio A",
+      "tried": "The current redesign from 1120-page-trio: one white card with an OS dropdown, a collapsible five-step list, a reassurance box and a blue try box.",
+      "verdict": "superseded",
+      "why": "Serviceable, but chunky boxes exceed their content, the steps are dense bullets, and the white is harsh on the green.",
+      "contributed": [
+        "the per-OS steps and trust links",
+        "the try-it pair"
+      ],
+      "followed_by": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "H"
+      ]
+    },
+    {
+      "id": "C",
+      "file": "prototypes/c/index.html",
+      "name": "Tiles and strip",
+      "tried": "J's bar, paper and footer. Four small OS tiles, one download button, the steps as a row of numbered pictograms with three-word captions, the trust note in a Data Note box, and two small try tiles.",
+      "verdict": "parked",
+      "why": "G preferred: only its band shows a helpful icon per step without over-depicting or under-explaining.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "D",
+      "file": "prototypes/d/index.html",
+      "name": "Evening, folded steps",
+      "tried": "A dark forest palette. One panel holds OS pills, the button, and the steps folded behind a row of thumbnails that shows them before you open it. Try-it is one line of links.",
+      "verdict": "parked",
+      "why": "G preferred: only its band shows a helpful icon per step without over-depicting or under-explaining.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "E",
+      "file": "prototypes/e/index.html",
+      "name": "Two columns, sage",
+      "tried": "Soft sage paper. A sticky left column picks the OS and downloads; the right column is a rail of pictogram steps, with the trust note attached to the warning step it explains.",
+      "verdict": "parked",
+      "why": "G preferred: only its band shows a helpful icon per step without over-depicting or under-explaining.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "F",
+      "file": "prototypes/f/index.html",
+      "name": "Install diagram",
+      "tried": "J's look throughout. The install is one diagram in J's style: GitHub in an Internet box, then each step as a tile inside a Your Mac box, the warning step edged in amber, with a one-line caption and a First open note.",
+      "verdict": "parked",
+      "why": "G preferred: only its band shows a helpful icon per step without over-depicting or under-explaining.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "G",
+      "file": "prototypes/g/index.html",
+      "name": "Four modules, canvas",
+      "tried": "A warm canvas palette. The original's four OS cards return, shrunk to their content, each with its own button; choosing one shows its pictogram steps in a band under the row. Dashed try tiles.",
+      "verdict": "superseded",
+      "why": "The winner. Its tan paper, equal-width OS row and try-it section go; its pictogram band stays.",
+      "contributed": [
+        "the step band",
+        "the OS module card"
+      ],
+      "followed_by": [
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ]
+    },
+    {
+      "id": "H",
+      "file": "prototypes/h/index.html",
+      "name": "One step at a time",
+      "tried": "A lake palette. Download is step one of a stepper; each step fills one panel with a large pictogram and a title, and only the warning step carries the trust note. Back, numbered dots, Next.",
+      "verdict": "parked",
+      "why": "G preferred: only its band shows a helpful icon per step without over-depicting or under-explaining.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "I",
+      "file": "prototypes/i/index.html",
+      "name": "Featured card",
+      "tried": "The likely OS as one centered G card with a 'For you' badge; the other three as small pills on an 'Other versions' line under it. Sample rosters as a blue '+ Sample rosters' line inside the card.",
+      "verdict": "parked",
+      "why": "M preferred: it balances the likely option against the others without saturating the visitor.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "J",
+      "file": "prototypes/j/index.html",
+      "name": "Peeking tabs",
+      "tried": "The likely OS card in front, the other three as icon tabs peeking from behind its right edge that slide open on hover. Sample rosters as a blue dashed tile at the end of the step band.",
+      "verdict": "parked",
+      "why": "M preferred: it balances the likely option against the others without saturating the visitor.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "K",
+      "file": "prototypes/k/index.html",
+      "name": "Split button",
+      "tried": "No card: one 'Download for Mac' button whose arrow opens the four versions, with the chip and file name under it. Sample rosters as a blue twin button beside it.",
+      "verdict": "parked",
+      "why": "M preferred: it balances the likely option against the others without saturating the visitor.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "L",
+      "file": "prototypes/l/index.html",
+      "name": "Not right?",
+      "tried": "The likely OS card alone, then a 'Not on a Mac, Apple Silicon? All versions' line that unfolds G's four-module row. Sample rosters as an 'Include sample rosters' checkbox that makes the button download both.",
+      "verdict": "parked",
+      "why": "M preferred: it balances the likely option against the others without saturating the visitor.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "M",
+      "file": "prototypes/m/index.html",
+      "name": "Growing module",
+      "tried": "G's row kept, but the likely module takes most of the width and the other three shrink to icon and name; clicking one grows it. Sample rosters as a blue pill beside What's new in the hero.",
+      "verdict": "superseded",
+      "why": "The winner. Collapsed modules shed their subtitles, the macOS note is rewritten, and the title becomes HappyCamper.",
+      "contributed": [
+        "the growing module row"
+      ],
+      "followed_by": [
+        "N",
+        "O"
+      ]
+    },
+    {
+      "id": "N",
+      "file": "prototypes/n/index.html",
+      "name": "Short labels",
+      "tried": "M with collapsed modules reading Mac (Silicon), Mac (Intel), Windows and Linux, no subtitles until a module opens, Jay's macOS note, and the title HappyCamper. Sample rosters stay a pill in the hero.",
+      "verdict": "parked",
+      "why": "Not reviewed yet.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "O",
+      "file": "prototypes/o/index.html",
+      "name": "Samples column",
+      "tried": "N with the sample rosters as a fifth, blue module instead of the hero pill. Opened, its band shows how to use them: unzip, import both, view and sort, export a CSV.",
+      "verdict": "parked",
+      "why": "Base for P–S, which test a way to point at Demo and Details below the download.",
+      "contributed": [],
+      "followed_by": [
+        "P",
+        "Q",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "id": "P",
+      "file": "prototypes/p/index.html",
+      "name": "Signpost cards",
+      "tried": "O plus two cards under the band: Demo in blue with a globe, Details in green with a shield, each with one line. The footer drops its pills so each link appears once below the header.",
+      "verdict": "superseded",
+      "why": "The winner. Its signpost cards stay; the rosters return to the bottom beside them, and the guessed module needs a stronger highlight.",
+      "contributed": [
+        "the signpost cards"
+      ],
+      "followed_by": [
+        "T"
+      ]
+    },
+    {
+      "id": "Q",
+      "file": "prototypes/q/index.html",
+      "name": "Footer lines",
+      "tried": "O with no new section. The footer's Demo and Details pills move above the credit and each gains its one line.",
+      "verdict": "parked",
+      "why": "P preferred.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "R",
+      "file": "prototypes/r/index.html",
+      "name": "Two questions",
+      "tried": "O plus one aside box, darker than the page: 'Not ready to install? Try the demo…' and 'Questions about how it works, or why to trust it? See Details.' The footer drops its pills.",
+      "verdict": "parked",
+      "why": "P preferred.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "S",
+      "file": "prototypes/s/index.html",
+      "name": "Picture tiles",
+      "tried": "O plus two tiles, each a small drawing of the page it opens: the demo's table in a browser, and J's device diagram. One line each. The footer drops its pills.",
+      "verdict": "parked",
+      "why": "P preferred.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "T",
+      "file": "prototypes/t/index.html",
+      "name": "Rosters box, clear guess",
+      "tried": "P with the samples column removed and three cards at the bottom: Download demo rosters, In-browser demo and Details. The guessed module gets a solid green outline with a halo, a 'Suggested for you' badge and 'Guessed from your browser'; collapsed, it keeps a dashed green outline.",
+      "verdict": "confirmed",
+      "why": "Shipped as site/index.html.",
+      "contributed": [],
+      "followed_by": [],
+      "revisions": [
+        {
+          "ask": "\"The quickest look at happycamper's core features\", 'How app is built, and how data is used\", \"Four sets of sample rosters to demo in the app\"",
+          "changed": "The three bottom cards now read: The quickest look at HappyCamper's core features. / How the app is built, and how data is used. / Four sets of sample rosters to demo in the app."
+        },
+        {
+          "ask": "replace \"guessed from your browser\" with 'recommended for you'",
+          "changed": "The line under the guessed module's download reads Recommended for you."
+        }
+      ]
+    }
+  ]
+}

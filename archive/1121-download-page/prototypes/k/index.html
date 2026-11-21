@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../g2.css">
+<style>
+  .get { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: .6rem; margin: 1.8rem 0 0; }
+  .split { position: relative; display: inline-flex; }
+  .split a.dl { margin: 0; border-radius: 8px 0 0 8px; padding: .6rem 1.2rem; font-size: .95rem; }
+  .split > button { padding: 0 .7rem; border: 0; border-left: 1px solid rgba(255,255,255,.35); border-radius: 0 8px 8px 0; background: var(--accent); color: #fff; font-size: .8rem; cursor: pointer; }
+  .menu { position: absolute; top: calc(100% + .35rem); left: 0; z-index: 5; min-width: 100%; padding: .3rem; background: var(--mod); border: 1px solid var(--mod-edge); border-radius: 10px; box-shadow: 0 8px 20px rgba(20,60,30,.18); }
+  .menu[hidden] { display: none; }
+  .menu button { display: grid; grid-template-columns: 26px 1fr auto; align-items: center; gap: .5rem; width: 100%; padding: .4rem .5rem; font: inherit; font-size: .82rem; text-align: left; color: var(--ink); background: transparent; border: 0; border-radius: 6px; cursor: pointer; white-space: nowrap; }
+  .menu button:hover { background: rgba(255,255,255,.6); }
+  .menu .ic { width: 22px; height: 16px; color: var(--accent); }
+  .menu small { color: var(--faint); font-size: .72rem; }
+  .menu .tick { color: var(--accent); font-weight: 700; }
+  a.rosbtn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem 1rem; border-radius: 8px; border: 1.5px solid var(--blue-edge); background: var(--blue-soft); color: var(--blue); font-size: .88rem; font-weight: 700; text-decoration: none; }
+  a.rosbtn .csv { width: 18px; height: 22px; }
+  .sub { margin: .45rem 0 0; text-align: center; font-size: .76rem; color: var(--faint); }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>K · Split button</b>
+  <span>No card: one 'Download for Mac' button whose arrow opens the four versions, with the chip and file name under it. Sample rosters as a blue twin button beside it.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="index.html" aria-current="page" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <div class="hero">
+      <img src="../../icon.png" alt="HappyCamper logo">
+      <h1>Download HappyCamper</h1>
+      <p class="version"><span data-version="Version ">Version 2.5.0</span><span data-reldate=" – "></span></p>
+      <details class="whatsnew" data-whatsnew><summary>See what's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+    </div>
+    <div class="get">
+      <div class="split"><a class="dl" id="btn" href="#"></a><button type="button" id="caret" aria-haspopup="true" aria-expanded="false" aria-label="Other versions">▾</button><div class="menu" id="menu" hidden></div></div>
+      <a class="rosbtn" id="ros" href="#"></a>
+    </div>
+    <p class="sub" id="sub"></p>
+    <div class="how" id="how"></div>
+
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, mine = DL.guess(), menu = document.getElementById("menu"), caret = document.getElementById("caret");
+    var r = document.getElementById("ros"); r.href = DL.links.rosters; r.innerHTML = K.csv + "Sample rosters";
+    function show(id) {
+      var o = DL.byId(id);
+      var b = document.getElementById("btn"); b.href = DL.url(o.file); b.innerHTML = DL.svg("i-down") + "Download for " + o.name;
+      document.getElementById("sub").innerHTML = o.sub + " · " + o.file + (id === mine ? "" : " · <a href=\"#\" id=\"back\">back to mine</a>");
+      var back = document.getElementById("back"); if (back) back.addEventListener("click", function (e) { e.preventDefault(); show(mine); });
+      menu.innerHTML = DL.os.map(function (x) {
+        return '<button type="button" data-os="' + x.id + '">' + DL.svg(x.icon) + "<span>" + x.name + " <small>" + x.sub + "</small></span><span class=\"tick\">" + (x.id === id ? "✓" : "") + "</span></button>";
+      }).join("");
+      document.getElementById("how").innerHTML = K.band(DL, o);
+    }
+    caret.addEventListener("click", function (e) { e.stopPropagation(); menu.hidden = !menu.hidden; caret.setAttribute("aria-expanded", String(!menu.hidden)); });
+    menu.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { show(b.dataset.os); menu.hidden = true; } });
+    document.addEventListener("click", function () { menu.hidden = true; });
+    show(mine);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

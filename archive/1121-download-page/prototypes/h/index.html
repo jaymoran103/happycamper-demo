@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<style>
+  /* H: lake palette, download is step one, then one step at a time */
+  :root { --page: #dcebe7; --soft: #3f5550; --faint: #5d726c; --panel: #c4ddd6; --panel-edge: #a5c8be; --link: #22685a; --accent: #1a672c; }
+  .tag { margin: .5rem 0 0; color: var(--soft); }
+  .ver { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .9rem; margin: .4rem 0 0; font-size: .85rem; }
+  .ver b { color: var(--accent); }
+
+  .stage { margin: 1.5rem 0 0; display: grid; grid-template-columns: 220px 1fr; gap: 1.4rem; align-items: center; padding: 1.1rem 1.2rem; background: var(--panel); border-radius: 16px; }
+  .stage .art { background: #fff; border-radius: 12px; padding: .6rem; aspect-ratio: 3 / 2; display: grid; place-items: center; }
+  .stage .art .pic { width: 100%; height: 100%; }
+  .stage .art .ic { width: 70%; height: 70%; color: var(--accent); }
+  .num { font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); }
+  .stage h2 { margin: .15rem 0 .35rem; font-size: 1.2rem; line-height: 1.3; }
+  .stage p { margin: 0; font-size: .86rem; color: var(--soft); }
+  .stage select { margin-top: .6rem; font: inherit; font-size: .85rem; padding: .3rem .4rem; border-radius: 6px; border: 1px solid var(--panel-edge); background: #fff; }
+  a.btn { display: inline-flex; align-items: center; gap: .5rem; margin-top: .7rem; padding: .55rem 1.2rem; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+  a.btn .ic { width: 18px; height: 18px; }
+
+  .nav { display: flex; align-items: center; justify-content: space-between; margin: .7rem 0 0; }
+  .dots { display: flex; gap: .35rem; }
+  .dots button { width: 2rem; height: 1.6rem; border-radius: 999px; border: 1.5px solid var(--panel-edge); background: transparent; font: 700 .72rem Verdana, sans-serif; color: var(--faint); cursor: pointer; }
+  .dots button[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .dots button.gate { border-color: #e0a520; }
+  .nav .go { font: inherit; font-size: .85rem; font-weight: 700; padding: .35rem .9rem; border-radius: 8px; border: 1.5px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+  .nav .go:disabled { opacity: .35; cursor: default; }
+
+  .try { margin: 2rem 0 0; font-size: .9rem; }
+  .try a { font-weight: 700; }
+  .try a.web { color: var(--web); }
+  @media (max-width: 600px) { .stage { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>H · One step at a time</b>
+  <span>A lake palette. Download is step one of a stepper; each step fills one panel with a large pictogram and a title, and only the warning step carries the trust note. Back, numbered dots, Next.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="index.html" aria-current="page" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <h1>Download HappyCamper</h1>
+    <p class="tag" id="tag"></p>
+    <p class="ver"><b data-version="Version ">Version 2.5.0</b>
+      <details class="whatsnew" data-whatsnew><summary>What's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details></p>
+
+    <div class="stage" aria-live="polite">
+      <div class="art" id="art"></div>
+      <div><div class="num" id="num"></div><h2 id="title"></h2><div id="body"></div></div>
+    </div>
+    <div class="nav">
+      <button class="go" id="prev" type="button">‹ Back</button>
+      <div class="dots" id="dots"></div>
+      <button class="go" id="next" type="button">Next ›</button>
+    </div>
+
+    <p class="try">Try it first with <a id="rosters" href="#">sample rosters</a>, or skip the download: <a class="web" id="web" href="#">web demo</a>.</p>
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, os = DL.guess(), at = 0;
+    document.getElementById("tag").textContent = DL.tagline;
+    document.getElementById("rosters").href = DL.links.rosters;
+    document.getElementById("web").href = DL.links.demo;
+
+    function seq() {
+      var o = DL.byId(os);
+      return [{ download: true, text: "Download" }].concat(DL.steps[o.steps]);
+    }
+    function draw() {
+      var o = DL.byId(os), list = seq(), s = list[at];
+      document.getElementById("num").textContent = "Step " + (at + 1) + " of " + list.length;
+      document.getElementById("title").textContent = s.download ? "Download for " + o.name : s.text;
+      document.getElementById("art").innerHTML = s.download ? DL.svg(o.icon) : K.pic(s);
+      var body = "";
+      if (s.download) {
+        body = '<select id="os" aria-label="Your computer">' + DL.os.map(function (x) {
+          return '<option value="' + x.id + '"' + (x.id === os ? " selected" : "") + ">" + x.name + ", " + x.sub + "</option>"; }).join("") + "</select><br>" +
+          '<a class="btn" href="' + DL.url(o.file) + '">' + DL.svg("i-down") + o.file + "</a>";
+      } else {
+        if (s.more) body += "<p>" + s.more + "</p>";
+        if (s.gate) body += '<p style="margin-top:.5rem">' + DL.trustHTML(o.steps) + "</p>";
+        if (!s.more && !s.gate && at === list.length - 1) body += "<p>It opens normally from now on.</p>";
+      }
+      document.getElementById("body").innerHTML = body;
+      var sel = document.getElementById("os");
+      if (sel) sel.addEventListener("change", function () { os = sel.value; draw(); });
+      document.getElementById("dots").innerHTML = list.map(function (x, i) {
+        return '<button type="button" data-i="' + i + '" class="' + (x.gate ? "gate" : "") + '" aria-current="' + (i === at) + '" aria-label="Step ' + (i + 1) + '">' + (i + 1) + "</button>";
+      }).join("");
+      document.getElementById("prev").disabled = at === 0;
+      document.getElementById("next").disabled = at === list.length - 1;
+    }
+    document.getElementById("dots").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { at = +b.dataset.i; draw(); } });
+    document.getElementById("prev").addEventListener("click", function () { at--; draw(); });
+    document.getElementById("next").addEventListener("click", function () { at++; draw(); });
+    draw();
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

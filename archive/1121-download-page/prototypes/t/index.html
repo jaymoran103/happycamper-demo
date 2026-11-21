@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../g2.css">
+<style>
+  .acc { display: flex; gap: .5rem; margin: 1.8rem auto 0; max-width: 36rem; }
+  .acc .mod { flex: 1; min-width: 0; padding: .7rem .3rem; cursor: pointer; transition: flex .2s ease; }
+  .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; border-color: var(--accent); }
+  .acc .mod .more, .acc .mod .full, .acc .mod.open .short { display: none; }
+  .acc .mod.open .more { display: contents; }
+  .acc .mod.open .full { display: block; }
+  .acc .mod .short { font-size: .76rem; text-align: center; line-height: 1.25; }
+  .acc .mod:not(.open):hover { background: rgba(255,255,255,.4); }
+  .acc .file { font-size: .72rem; color: var(--faint); margin-top: .3rem; }
+  @media (max-width: 560px) { .acc { flex-wrap: wrap; } .acc .mod.open { flex: 1 1 100%; order: -1; } }
+
+  .signs { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 2rem 0 0; }
+  .signs a { display: flex; align-items: center; gap: .8rem; padding: .75rem .9rem; border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--mod); border: 1.5px solid var(--mod-edge); }
+  .signs a.demo { background: var(--blue-soft); border-color: var(--blue-edge); }
+  .signs a:hover { filter: brightness(1.04); border-color: var(--accent); }
+  .signs a.demo:hover { border-color: var(--blue); }
+  .signs .ic { flex: none; width: 28px; height: 28px; color: var(--accent); }
+  .signs .demo .ic { color: var(--blue); }
+  .signs b { display: block; font-size: .92rem; }
+  .signs .demo b { color: var(--blue); }
+  .signs span { font-size: .8rem; color: var(--soft); }
+  @media (max-width: 600px) { .signs { grid-template-columns: 1fr; } }
+
+  .acc .mod.open { background: #f4f9f2; border: 2.5px solid var(--accent); }
+  .acc .mod.mine.open { box-shadow: 0 0 0 5px rgba(26,103,44,.2); }
+  .acc .mod.mine:not(.open) { border: 2px dashed var(--accent); }
+  .acc .mod .badge { font-size: .66rem; padding: .05rem .6rem; }
+  .acc .guess { display: flex; align-items: center; gap: .3rem; margin-top: .55rem; font-size: .7rem; color: var(--faint); }
+  .acc .guess .ic { width: 13px; height: 13px; color: var(--accent); }
+  .acc .mod:not(.open) .guess { display: none; }
+  .signs { grid-template-columns: repeat(3, 1fr); }
+  .signs a.ros .csv { flex: none; width: 26px; height: 31px; }
+  @media (max-width: 720px) { .signs { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>T · Rosters box, clear guess</b>
+  <span>P with the samples column removed and three cards at the bottom: Download demo rosters, In-browser demo and Details. The guessed module gets a solid green outline with a halo, a 'Suggested for you' badge and 'Guessed from your browser'; collapsed, it keeps a dashed green outline.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="index.html" aria-current="page" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <div class="hero">
+      <img src="../../icon.png" alt="HappyCamper logo">
+      <h1>HappyCamper</h1>
+      <p class="version"><span data-version="Version ">Version 2.5.0</span><span data-reldate=" – "></span></p>
+      <details class="whatsnew" data-whatsnew><summary>See what's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+    </div>
+    <div class="acc" id="acc"></div>
+    <div class="how" id="how"></div>
+    <nav class="signs" aria-label="Try HappyCamper">
+      <a class="ros" id="toRosters" href="#"></a>
+      <a class="demo" id="toDemo" href="#"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><div><b>In-browser demo</b><span>The quickest look at HappyCamper's core features.</span></div></a>
+      <a id="toDetails" href="#"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><div><b>Details</b><span>How the app is built, and how data is used.</span></div></a>
+    </nav>
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, mine = DL.guess();
+    var trust = DL.trustHTML;
+    DL.trustHTML = function (k) {
+      return k !== "mac" ? trust(k) : "macOS requires these steps for any app not on the App Store. See <a href=\"" + DL.trust.mac.url + "\">Apple's guide</a> for details. HappyCamper's code is open-source, <a href=\"" + DL.links.details + "\">learn more here</a>.";
+    };
+    function osMod(o) {
+      return '<div class="mod" data-os="' + o.id + '" tabindex="0"><span class="badge more">For you</span>' + DL.svg(o.icon) +
+        '<b class="short">' + o.short + '</b><b class="full">' + o.name + '</b><small class="more">' + o.sub + "</small>" +
+        '<span class="more"><a class="dl" href="' + DL.url(o.file) + '">' + DL.svg("i-down") + 'Download</a><span class="file">' + o.file + "</span></span></div>";
+    }
+    function wire(acc, show) {
+      acc.querySelectorAll(".mod").forEach(function (m) { if (m.dataset.os !== mine) { var b = m.querySelector(".badge"); if (b) b.remove(); } });
+      acc.addEventListener("click", function (e) { var m = e.target.closest(".mod"); if (m && !m.classList.contains("open")) show(m.dataset.os); });
+      acc.addEventListener("keydown", function (e) { var m = e.target.closest(".mod"); if (m && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); show(m.dataset.os); } });
+    }
+
+    var acc = document.getElementById("acc");
+    acc.innerHTML = DL.os.map(osMod).join("");
+    var m0 = acc.querySelector('[data-os="' + mine + '"]');
+    m0.classList.add("mine");
+    m0.querySelector(".badge").textContent = "Suggested for you";
+    m0.querySelector("span.more").insertAdjacentHTML("beforeend", '<span class="guess">' + DL.svg("i-chip") + "Recommended for you</span>");
+    function show(id) {
+      acc.querySelectorAll(".mod").forEach(function (m) { m.classList.toggle("open", m.dataset.os === id); });
+      document.getElementById("how").innerHTML = K.band(DL, DL.byId(id));
+    }
+    wire(acc, show);
+    show(mine);
+    var fp = document.querySelector("footer .footpills"); if (fp) fp.parentNode.remove();
+    var r = document.getElementById("toRosters");
+    r.href = DL.links.rosters;
+    r.innerHTML = K.csv + "<div><b>Download demo rosters</b><span>Four sets of sample rosters to demo in the app.</span></div>";
+    document.getElementById("toDemo").href = DL.links.demo;
+    document.getElementById("toDetails").href = DL.links.details;
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

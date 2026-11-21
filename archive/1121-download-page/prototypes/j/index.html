@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../g2.css">
+<style>
+  .deck { display: flex; justify-content: center; align-items: center; margin: 1.8rem 0 0; }
+  .deck .mod { width: 16rem; z-index: 2; padding-top: 1.1rem; box-shadow: 0 6px 16px rgba(20,60,30,.14); }
+  .deck .file { font-size: .72rem; color: var(--faint); margin-top: .3rem; }
+  .peek { display: grid; gap: .35rem; margin-left: -10px; z-index: 1; }
+  .peek button { display: grid; grid-template-columns: 26px auto; align-items: center; gap: .4rem; width: 52px; overflow: hidden; padding: .45rem .5rem .45rem 18px; font: inherit; font-size: .74rem; text-align: left; white-space: nowrap;
+    color: var(--soft); background: var(--mod); border: 1.5px solid var(--mod-edge); border-left: 0; border-radius: 0 10px 10px 0; cursor: pointer; transition: width .18s ease; }
+  .peek button:hover, .peek button:focus-visible { width: 11.5rem; color: var(--ink); }
+  .peek .ic { width: 24px; height: 18px; color: var(--accent); }
+  .peek small { display: block; font-size: .66rem; color: var(--faint); }
+  ol.strip li.ros-tile { border-left: 1.5px dashed var(--blue-edge); padding-left: .5rem; margin-left: .3rem; }
+  ol.strip li.ros-tile::before { display: none; }
+  ol.strip li.ros-tile a { display: block; text-decoration: none; color: var(--blue); font-weight: 700; }
+  ol.strip li.ros-tile .pic { background: var(--blue-soft); display: grid; place-items: center; aspect-ratio: 3 / 2; }
+  ol.strip li.ros-tile .csv { width: 34px; height: 40px; }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>J · Peeking tabs</b>
+  <span>The likely OS card in front, the other three as icon tabs peeking from behind its right edge that slide open on hover. Sample rosters as a blue dashed tile at the end of the step band.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="index.html" aria-current="page" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <div class="hero">
+      <img src="../../icon.png" alt="HappyCamper logo">
+      <h1>Download HappyCamper</h1>
+      <p class="version"><span data-version="Version ">Version 2.5.0</span><span data-reldate=" – "></span></p>
+      <details class="whatsnew" data-whatsnew><summary>See what's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+    </div>
+    <div class="deck"><div class="mod" id="card"></div><div class="peek" id="peek"></div></div>
+    <div class="how" id="how"></div>
+
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, mine = DL.guess();
+    function show(id) {
+      var o = DL.byId(id);
+      document.getElementById("card").innerHTML = '<span class="badge">' + (id === mine ? "For you" : "Selected") + "</span>" + DL.svg(o.icon) +
+        "<b>" + o.name + "</b><small>" + o.sub + "</small>" +
+        '<a class="dl" href="' + DL.url(o.file) + '">' + DL.svg("i-down") + "Download</a><span class=\"file\">" + o.file + "</span>";
+      document.getElementById("peek").innerHTML = DL.os.filter(function (x) { return x.id !== id; }).map(function (x) {
+        return '<button type="button" data-os="' + x.id + '" aria-label="' + x.name + ", " + x.sub + '">' + DL.svg(x.icon) + "<span>" + x.name + "<small>" + x.sub + "</small></span></button>";
+      }).join("");
+      var ros = '<li class="ros-tile"><a href="' + DL.links.rosters + '"><span class="pic">' + K.csv + "</span>Sample rosters</a></li>";
+      document.getElementById("how").innerHTML = K.band(DL, o, ros);
+    }
+    document.getElementById("peek").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) show(b.dataset.os); });
+    show(mine);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

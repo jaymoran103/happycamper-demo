@@ -65,6 +65,18 @@ Round `archive/1120-page-trio`, the Details page (formerly Codebase). The model 
 18. **Say each thing once on a page.** The footer dropped its email line because the history already gives the address.
     _Seen: 1120-page-trio J_
 
+19. **Show each install step as one pictogram with a short caption.** Bullets read as dense, a diagram over-depicted, and one step per screen hid the whole path.
+    _Seen: 1121-download-page B, C–H → G_
+
+20. **Emphasize the likely choice, and disclose the rest on request.** Four equal OS modules spent the full width on a display only a quarter relevant to any one visitor.
+    _Seen: 1121-download-page G_
+
+21. **Never repeat a link the header already gives, and drop an element that can't say why it's there.** The try-it section paired sample rosters with a second web demo link.
+    _Seen: 1121-download-page G_
+
+22. **Keep the green paper. Blue is the only second hue.** G's tan read as a different site.
+    _Seen: 1121-download-page D, E, G, H_
+
 ## Current look
 
 - **Header:** a sticky forest-green bar (`#1a672c`). The logo sits directly on the green with the name, on the left. The routes are pills on the right, with the current page filled white. The logo links to the download page. The routes are Download, Demo and Details. Using this bar on every page is still open.

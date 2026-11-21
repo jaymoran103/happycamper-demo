@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<style>
+  /* E: soft sage paper, two columns, the reassurance sits on the warning step */
+  :root { --page: #e9f0e3; --panel: #d6e5cf; --panel-edge: #b7cfae; --soft: #4a5a4f; --faint: #66766a; }
+  .page { width: min(58rem, 100%); }
+  .cols { display: grid; grid-template-columns: 17rem 1fr; gap: 2.5rem; margin-top: 1.4rem; align-items: start; }
+  .left { position: sticky; top: 4.5rem; }
+  .tag { margin: .5rem 0 0; color: var(--soft); }
+  .ver { margin: .9rem 0 .4rem; font-size: .85rem; }
+  .ver b { color: var(--accent); }
+
+  .picker { display: grid; gap: .3rem; margin: 1.2rem 0 0; }
+  .picker button { display: grid; grid-template-columns: 30px auto 1fr; align-items: center; gap: .55rem; padding: .4rem .7rem; font: inherit; color: var(--ink);
+    text-align: left; background: transparent; border: 1px solid transparent; border-radius: 8px; cursor: pointer; }
+  .picker button:hover { background: rgba(255,255,255,.5); }
+  .picker button[aria-checked="true"] { background: #fff; border-color: var(--panel-edge); }
+  .picker .ic { width: 26px; height: 19px; color: var(--accent); }
+  .picker .nm { font-weight: 700; font-size: .88rem; }
+  .picker .sb { font-size: .74rem; color: var(--faint); }
+  a.btn { display: flex; justify-content: center; align-items: center; gap: .5rem; margin: .9rem 0 0; padding: .65rem 1rem; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+  a.btn .ic { width: 18px; height: 18px; }
+  .file { margin: .3rem 0 0; text-align: center; font-size: .74rem; color: var(--faint); }
+
+  h2 { margin: 0 0 .9rem; font-size: 1.1rem; }
+  ol.rail { list-style: none; margin: 0; padding: 0; position: relative; }
+  ol.rail::before { content: ""; position: absolute; left: 47px; top: 20px; bottom: 20px; width: 2px; background: var(--panel-edge); }
+  ol.rail li { position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 1rem; align-items: center; margin: 0 0 .7rem; }
+  ol.rail .pic { width: 96px; height: 64px; background: #fff; border: 1px solid var(--panel-edge); border-radius: 8px; }
+  ol.rail b { font-size: .92rem; }
+  ol.rail small { display: block; font-size: .8rem; color: var(--soft); margin-top: .15rem; }
+  ol.rail li.gate .pic { border: 2px solid #f0b429; }
+  ol.rail .aside { margin-top: .45rem; padding: .5rem .7rem; font-size: .8rem; line-height: 1.45; background: var(--panel); border: 1px solid var(--panel-edge); border-radius: 8px; display: flex; gap: .45rem; }
+  ol.rail .aside .ic { flex: none; width: 16px; height: 16px; color: var(--accent); margin-top: .1rem; }
+  .hint { margin: .6rem 0 0; font-size: .78rem; color: var(--faint); }
+
+  .try { margin: 2.4rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--panel-edge); display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+  .try p { margin: 0 .4rem 0 0; font-size: .9rem; }
+  .try a { padding: .35rem .9rem; border-radius: 999px; font-size: .84rem; font-weight: 700; text-decoration: none; border: 1px solid var(--accent); }
+  .try a.web { color: var(--web); border-color: var(--web); }
+  @media (max-width: 760px) { .cols { grid-template-columns: 1fr; gap: 1.8rem; } .left { position: static; } }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>E · Two columns, sage</b>
+  <span>Soft sage paper. A sticky left column picks the OS and downloads; the right column is a rail of pictogram steps, with the trust note attached to the warning step it explains.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="index.html" aria-current="page" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <h1>Download HappyCamper</h1>
+    <div class="cols">
+      <div class="left">
+        <p class="tag" id="tag" style="margin-top:0"></p>
+        <div id="pick"></div>
+        <a class="btn" id="btn" href="#"></a>
+        <p class="file" id="file"></p>
+        <p class="ver"><b data-version="Version ">Version 2.5.0</b></p>
+        <details class="whatsnew" data-whatsnew><summary>What's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+      </div>
+      <div>
+        <h2>Then install</h2>
+        <ol class="rail" id="rail"></ol>
+        <p class="hint" id="hint"></p>
+      </div>
+    </div>
+    <div class="try"><p>Try it first:</p><a id="rosters" href="#">Sample rosters</a><a class="web" id="web" href="#">Web demo</a></div>
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit;
+    document.getElementById("tag").textContent = DL.tagline;
+    document.getElementById("rosters").href = DL.links.rosters;
+    document.getElementById("web").href = DL.links.demo;
+    function show(id) {
+      var o = DL.byId(id), steps = DL.steps[o.steps];
+      var b = document.getElementById("btn");
+      b.href = DL.url(o.file);
+      b.innerHTML = DL.svg("i-down") + "Download for " + o.name;
+      document.getElementById("file").textContent = o.file;
+      var hasGate = steps.some(function (s) { return s.gate; });
+      document.getElementById("rail").innerHTML = steps.map(function (s, i) {
+        var aside = (s.gate || (!hasGate && i === steps.length - 1)) ? '<div class="aside">' + DL.svg("i-shield") + "<span>" + DL.trustHTML(o.steps) + "</span></div>" : "";
+        return '<li class="' + (s.gate ? "gate" : "") + '">' + K.pic(s) + "<div><b>" + s.text + "</b>" + (s.more ? "<small>" + s.more + "</small>" : "") + aside + "</div></li>";
+      }).join("");
+      document.getElementById("hint").textContent = o.steps === "mac" ? "Which Mac? " + DL.whichMac : "";
+    }
+    var cur = DL.guess();
+    document.getElementById("pick").appendChild(K.picker(DL, cur, show));
+    show(cur);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

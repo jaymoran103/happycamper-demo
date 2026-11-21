@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../g2.css">
+<style>
+  .acc { display: flex; gap: .5rem; margin: 1.8rem auto 0; max-width: 36rem; }
+  .acc .mod { flex: 1; min-width: 0; padding: .7rem .3rem; cursor: pointer; transition: flex .2s ease; }
+  .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; border-color: var(--accent); }
+  .acc .mod .more { display: none; }
+  .acc .mod.open .more { display: contents; }
+  .acc .mod:not(.open) b { font-size: .78rem; }
+  .acc .mod:not(.open) small { font-size: .64rem; text-align: center; line-height: 1.25; }
+  .acc .mod:not(.open):hover { background: rgba(255,255,255,.4); }
+  .acc .file { font-size: .72rem; color: var(--faint); margin-top: .3rem; }
+  .hero .pills { display: flex; justify-content: center; flex-wrap: wrap; gap: .4rem; margin-top: .45rem; }
+  .hero .pills details.whatsnew { margin: 0; }
+  .hero a.rospill { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; font-weight: 700; color: var(--blue); border: 1px solid currentColor; border-radius: 999px; padding: .15rem .8rem; text-decoration: none; }
+  .hero a.rospill .csv { width: 13px; height: 16px; }
+  @media (max-width: 560px) { .acc .mod.open { flex: 3; } }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>M · Growing module</b>
+  <span>G's row kept, but the likely module takes most of the width and the other three shrink to icon and name; clicking one grows it. Sample rosters as a blue pill beside What's new in the hero.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="index.html" aria-current="page" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <div class="hero">
+      <img src="../../icon.png" alt="HappyCamper logo">
+      <h1>Download HappyCamper</h1>
+      <p class="version"><span data-version="Version ">Version 2.5.0</span><span data-reldate=" – "></span></p>
+      <details class="whatsnew" data-whatsnew><summary>See what's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+    </div>
+    <div class="acc" id="acc"></div>
+    <div class="how" id="how"></div>
+
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, mine = DL.guess();
+    var w = document.querySelector(".hero details.whatsnew"), pills = document.createElement("div");
+    pills.className = "pills"; w.parentNode.insertBefore(pills, w); pills.appendChild(w);
+    pills.insertAdjacentHTML("beforeend", '<a class="rospill" href="' + DL.links.rosters + '">' + K.csv + "Sample rosters</a>");
+    var acc = document.getElementById("acc");
+    acc.innerHTML = DL.os.map(function (o) {
+      return '<div class="mod" data-os="' + o.id + '" tabindex="0"><span class="badge more">For you</span>' + DL.svg(o.icon) + "<b>" + o.name + "</b><small>" + o.sub + "</small>" +
+        '<span class="more"><a class="dl" href="' + DL.url(o.file) + '">' + DL.svg("i-down") + 'Download</a><span class="file">' + o.file + "</span></span></div>";
+    }).join("");
+    acc.querySelectorAll(".mod").forEach(function (m) { if (m.dataset.os !== mine) m.querySelector(".badge").remove(); });
+    function show(id) {
+      acc.querySelectorAll(".mod").forEach(function (m) { m.classList.toggle("open", m.dataset.os === id); });
+      document.getElementById("how").innerHTML = K.band(DL, DL.byId(id));
+    }
+    acc.addEventListener("click", function (e) { var m = e.target.closest(".mod"); if (m && !m.classList.contains("open")) show(m.dataset.os); });
+    acc.addEventListener("keydown", function (e) { var m = e.target.closest(".mod"); if (m && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); show(m.dataset.os); } });
+    show(mine);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

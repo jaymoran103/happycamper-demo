@@ -1,0 +1,53 @@
+{
+  "notes": [
+    {
+      "iteration": "G",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:51:28.446Z",
+      "text": "G is the winner I want to iterate on next. Apply the standard green background instead of whatever tan this is. Blue is a solid secondary color if you need another hue family. Use the centered hero from version A, with 'Download HappyCamper', the version-date below, and dropping the tagline. This is the only one that shows a helpful icon for each step without overdepicting or underexplaining."
+    },
+    {
+      "iteration": "G",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:51:28.464Z",
+      "text": "Make the version picker more dynamic. The original reference did a great job guessing which OS a user runs, and emphasizing the most likely selection. This round will experiment with different ways to progressively disclose alternate versions. We're not devoting the entire content width towards a display that's only 25% relevant to any one user. Want to encourage clicking around for the curious user, without throwing too much in anyone's face."
+    },
+    {
+      "iteration": "G",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:51:28.481Z",
+      "text": "Last point is repetition of links. The demo data doesn't have a great justification to be there, next to a super redundant link to the web demo. This whole section feels out of place: drop it and experiment with alternate ways to offer the demo data alongside the app download."
+    },
+    {
+      "iteration": "M",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T03:05:24.396Z",
+      "text": "M is definitely the best, it does a good job of balancing the indicated options without saturating the user with info. Minor corrections for N: each collapsed column should show one or two words: Mac (Silicon), Mac (Intel), Windows, Linux. The subtitles don't add much for the collapsed versions, they just make the display awkward. We can disambiguate once the sections expand, with specific versions and the 2021 threshold in Mac's case."
+    },
+    {
+      "iteration": "M",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T03:05:24.413Z",
+      "text": "My other correction is to the Mac explanation: 'macOS requires these steps for any app not on the App Store. See [Apple's guide] for details. HappyCamper's code is open-source, [learn more here]().' 'Download HappyCamper' -> 'HappyCamper'. In iteration O, the same changes but introduce the samples as a fifth column. Rather than a section below explaining how to install, they can give a very basic overview of how to use these with whatever version a user downloads."
+    },
+    {
+      "iteration": "O",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T03:07:33.561Z",
+      "text": "Between iteration N and O, try different ways to highlight the two other pages, Demo and Details. Point to Details for apps that needed a security justification. I'm wondering about fleshing out this bottom section a bit more to point the user to the other two pages, without over-advertising or duplicating information. Essentially saying: click here for the lowest hassle way to see what the app does; I'm here if you have questions about how the app actually works and why you should trust it."
+    },
+    {
+      "iteration": "P",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T03:19:36.290Z",
+      "text": "P is excellent, propose some alternative lines for each link. This iteration will transition the sample roster download back to being a box at the bottom. We can distinguish these with 'download demo rosters' and 'in-browser demo.' Additionally, the 'recommended for you' is very poorly highlighted, nearly white on white. The recommended version should get a clearer outline or highlight, emphasizing this is a guess based on your browser info."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<style>
+  /* G: canvas paper, the original's four modules made small, steps under the row */
+  :root { --page: #f1ecdd; --ink: #2b2a22; --soft: #55533f; --faint: #77745c; --panel: #e4dcc4; --panel-edge: #cfc4a3; --link: #2f6a3b; }
+  .page { width: min(52rem, 100%); }
+  .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem 1rem; margin-top: .5rem; color: var(--soft); }
+  .top b { color: var(--accent); }
+
+  .mods { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 1.5rem 0 0; }
+  .mod { position: relative; display: grid; justify-items: center; gap: .1rem; padding: .9rem .5rem .8rem; background: #fbf8ef; border: 1.5px solid var(--panel-edge); border-radius: 12px; cursor: pointer; }
+  .mod[aria-current="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent) inset; }
+  .mod .badge { position: absolute; top: -.6rem; padding: 0 .5rem; font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: var(--accent); border-radius: 999px; visibility: hidden; }
+  .mod.yours .badge { visibility: visible; }
+  .mod .ic { width: 34px; height: 25px; color: var(--accent); margin-bottom: .25rem; }
+  .mod b { font-size: .92rem; }
+  .mod small { font-size: .72rem; color: var(--faint); }
+  .mod a { margin-top: .5rem; display: inline-flex; align-items: center; gap: .35rem; padding: .35rem .9rem; border-radius: 7px; background: var(--accent); color: #fff; font-size: .82rem; font-weight: 700; text-decoration: none; }
+  .mod a .ic { width: 15px; height: 15px; color: #fff; margin: 0; }
+
+  .how { margin: .8rem 0 0; padding: .9rem 1rem; background: var(--panel); border-radius: 12px; }
+  .how h2 { margin: 0 0 .6rem; font-size: .95rem; }
+  ol.strip { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; gap: .2rem; }
+  ol.strip li { flex: 1; text-align: center; font-size: .76rem; line-height: 1.3; }
+  ol.strip li + li::before { content: "›"; float: left; margin: 1.3rem 0 0 -.45rem; color: var(--faint); font-size: 1.1rem; }
+  ol.strip .pic { display: block; width: 100%; max-width: 88px; height: auto; margin: 0 auto .3rem; background: #fbf8ef; border-radius: 6px; }
+  ol.strip .gate .pic { outline: 2px solid #f0b429; }
+  .how p { margin: .7rem 0 0; font-size: .8rem; color: var(--soft); }
+
+  .try { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin: 1.4rem 0 0; }
+  .try a { display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .7rem; border-radius: 12px; border: 1.5px dashed var(--panel-edge); text-decoration: none; font-weight: 700; font-size: .88rem; }
+  .try a.web { color: var(--web); }
+  .try .ic { width: 20px; height: 20px; }
+  @media (max-width: 640px) { .mods { grid-template-columns: 1fr 1fr; row-gap: 1rem; } ol.strip { flex-wrap: wrap; } ol.strip li { flex: 0 0 30%; } ol.strip li::before { display: none; } }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>G · Four modules, canvas</b>
+  <span>A warm canvas palette. The original's four OS cards return, shrunk to their content, each with its own button; choosing one shows its pictogram steps in a band under the row. Dashed try tiles.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="../d/index.html" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="index.html" aria-current="page" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <h1>Download HappyCamper</h1>
+    <div class="top"><b data-version="Version ">Version 2.5.0</b><span id="tag"></span></div>
+    <details class="whatsnew" data-whatsnew style="margin-top:.5rem"><summary>What's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+
+    <div class="mods" id="mods"></div>
+    <div class="how"><h2 id="howh"></h2><ol class="strip" id="strip"></ol><p id="why"></p></div>
+
+    <div class="try">
+      <a id="rosters" href="#"></a>
+      <a class="web" id="web" href="#"></a>
+    </div>
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit, mine = DL.guess();
+    document.getElementById("tag").textContent = DL.tagline;
+    var r = document.getElementById("rosters"), w = document.getElementById("web");
+    r.href = DL.links.rosters; r.innerHTML = DL.svg("i-down") + "Sample rosters";
+    w.href = DL.links.demo; w.innerHTML = DL.svg("i-globe") + "Web demo, no download";
+    var mods = document.getElementById("mods");
+    DL.os.forEach(function (o) {
+      var m = document.createElement("div");
+      m.className = "mod" + (o.id === mine ? " yours" : "");
+      m.dataset.os = o.id;
+      m.innerHTML = '<span class="badge">For you</span>' + DL.svg(o.icon) + "<b>" + o.name + "</b><small>" + o.sub + "</small>" +
+        '<a href="' + DL.url(o.file) + '">' + DL.svg("i-down") + "Download</a>";
+      m.addEventListener("click", function () { show(o.id); });
+      mods.appendChild(m);
+    });
+    function show(id) {
+      var o = DL.byId(id), steps = DL.steps[o.steps];
+      mods.querySelectorAll(".mod").forEach(function (m) { m.setAttribute("aria-current", String(m.dataset.os === id)); });
+      document.getElementById("howh").textContent = "Installing on " + o.name;
+      document.getElementById("strip").innerHTML = steps.map(function (s) {
+        return '<li class="' + (s.gate ? "gate" : "") + '"' + (s.more ? ' title="' + s.more.replace(/<[^>]+>/g, "") + '"' : "") + ">" + K.pic(s) + s.text + "</li>";
+      }).join("");
+      document.getElementById("why").innerHTML = DL.trustHTML(o.steps);
+    }
+    show(mine);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>

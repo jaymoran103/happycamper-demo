@@ -1,0 +1,38 @@
+/* Shared by I onward: J's green paper, A's centered hero, G's module and
+ * step band. Each iteration adds only its OS picker and its sample rosters. */
+:root { --mod: #e6f1e2; --mod-edge: #a3c49b; --pic-bg: #f4f9f2; --blue: #2b68b8; --blue-soft: #dfeaf6; --blue-edge: #9ab8dc; }
+.page { width: min(52rem, 100%); }
+
+/* A's hero */
+.hero { text-align: center; margin-top: 2rem; }
+.hero img { width: 110px; height: 110px; }
+.hero h1 { margin: .8rem 0 0; font-size: 2.2rem; line-height: 1.2; }
+.hero .version { margin: .45rem 0 0; font-size: .95rem; font-weight: 700; color: var(--link); }
+.hero details.whatsnew { margin: .45rem 0 0; }
+.hero details.whatsnew ul { display: inline-block; text-align: left; }
+@media (max-width: 520px) { .hero h1 { font-size: 1.8rem; } }
+
+/* G's module */
+.mod { position: relative; display: grid; justify-items: center; gap: .1rem; padding: .9rem .7rem .8rem; background: var(--mod); border: 1.5px solid var(--mod-edge); border-radius: 12px; }
+.mod .badge { position: absolute; top: -.6rem; padding: 0 .5rem; font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: var(--accent); border-radius: 999px; }
+.mod > .ic { width: 34px; height: 25px; color: var(--accent); margin-bottom: .25rem; }
+.mod b { font-size: .95rem; }
+.mod small { font-size: .74rem; color: var(--faint); }
+a.dl { display: inline-flex; align-items: center; gap: .4rem; margin-top: .55rem; padding: .45rem 1.1rem; border-radius: 8px; background: var(--accent); color: #fff; font-size: .88rem; font-weight: 700; text-decoration: none; }
+a.dl:hover { filter: brightness(1.12); }
+a.dl .ic { width: 16px; height: 16px; }
+
+/* Sample rosters: the blue family */
+.ros { color: var(--blue); }
+.ros svg.csv { width: 22px; height: 26px; vertical-align: middle; }
+
+/* G's step band */
+.how { margin: 1.4rem 0 0; padding: .9rem 1rem; background: var(--panel); border-radius: 12px; }
+.how h2 { margin: 0 0 .6rem; font-size: .95rem; }
+ol.strip { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; gap: .2rem; }
+ol.strip li { flex: 1; text-align: center; font-size: .76rem; line-height: 1.3; }
+ol.strip li + li::before { content: "›"; float: left; margin: 1.3rem 0 0 -.45rem; color: var(--faint); font-size: 1.1rem; }
+ol.strip .pic { display: block; width: 100%; max-width: 88px; height: auto; margin: 0 auto .3rem; background: var(--pic-bg); border-radius: 6px; }
+ol.strip .gate .pic { outline: 2px solid #f0b429; }
+.how p { margin: .7rem 0 0; font-size: .8rem; color: var(--soft); }
+@media (max-width: 640px) { ol.strip { flex-wrap: wrap; } ol.strip li { flex: 0 0 30%; } ol.strip li::before { display: none; } }

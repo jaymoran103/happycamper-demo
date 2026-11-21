@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download HappyCamper</title>
+<link rel="icon" href="../../icon.png">
+<link rel="stylesheet" href="../../site.css">
+<style>
+  /* D: evening palette, one panel, install steps folded behind their own thumbnails */
+  :root {
+    --bar: #0f2616; --page: #1b3523; --ink: #e5eee2; --soft: #b9c9b6; --faint: #93a691;
+    --accent: #7cc96a; --accent-ink: #10220f; --link: #9fd98f;
+    --panel: #24442e; --panel-edge: #36603f; --well: #2c5236; --web: #8fb8ea;
+  }
+  .lede { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem 1rem; margin: .5rem 0 0; color: var(--soft); }
+  .lede b { color: var(--accent); }
+
+  .panel { margin: 1.5rem 0 0; padding: 1.1rem 1.2rem; background: var(--panel); border: 1px solid var(--panel-edge); border-radius: 14px; }
+  .picker { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .picker button { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .8rem; font: inherit; font-size: .82rem; color: var(--soft);
+    background: transparent; border: 1px solid var(--panel-edge); border-radius: 999px; cursor: pointer; }
+  .picker button[aria-checked="true"] { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+  .picker .ic { width: 20px; height: 15px; }
+  .picker .nm { font-weight: 700; }
+  .picker .sb { font-size: .74rem; }
+  .get { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; margin: 1rem 0 0; }
+  a.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .65rem 1.4rem; border-radius: 8px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+  a.btn .ic { width: 18px; height: 18px; }
+  .file { font-size: .78rem; color: var(--faint); }
+
+  details.steps { margin: 1rem 0 0; border-top: 1px solid var(--panel-edge); padding-top: .8rem; }
+  details.steps > summary { display: flex; align-items: center; gap: .8rem; cursor: pointer; list-style: none; }
+  details.steps > summary::-webkit-details-marker { display: none; }
+  details.steps > summary b { font-size: .9rem; white-space: nowrap; }
+  details.steps > summary b::after { content: " ▸"; font-size: .7rem; }
+  details.steps[open] > summary b::after { content: " ▾"; }
+  .thumbs { display: flex; gap: .3rem; }
+  .thumbs .pic { width: 42px; height: 28px; background: #f4f6f2; border-radius: 4px; }
+  details.steps[open] .thumbs { display: none; }
+  ol.list { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; gap: .45rem; counter-reset: s; }
+  ol.list li { counter-increment: s; display: grid; grid-template-columns: 84px 1fr; gap: .8rem; align-items: center; font-size: .9rem; }
+  ol.list .pic { width: 84px; height: 56px; background: #f4f6f2; border-radius: 6px; }
+  ol.list li span::before { content: counter(s) ". "; color: var(--accent); font-weight: 700; }
+  ol.list li small { display: block; color: var(--faint); font-size: .78rem; margin-top: .15rem; }
+  .why { margin: .9rem 0 0; font-size: .82rem; color: var(--soft); display: flex; gap: .5rem; }
+  .why .ic { flex: none; width: 18px; height: 18px; color: var(--accent); }
+
+  .try { margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; align-items: center; font-size: .9rem; color: var(--soft); }
+  .try a { font-weight: 700; }
+  .try .web { color: var(--web); }
+  details.whatsnew summary { color: var(--link); }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>D · Evening, folded steps</b>
+  <span>A dark forest palette. One panel holds OS pills, the button, and the steps folded behind a row of thumbnails that shows them before you open it. Try-it is one line of links.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="Original — superseded" class="nav-muted">A</a>
+    <a href="../b/index.html" title="Trio A — superseded" class="nav-muted">B</a>
+    <a href="../c/index.html" title="Tiles and strip — parked" class="nav-warn">C</a>
+    <a href="index.html" aria-current="page" title="Evening, folded steps — parked" class="nav-warn">D</a>
+    <a href="../e/index.html" title="Two columns, sage — parked" class="nav-warn">E</a>
+    <a href="../f/index.html" title="Install diagram — parked" class="nav-warn">F</a>
+    <a href="../g/index.html" title="Four modules, canvas — superseded" class="nav-muted">G</a>
+    <a href="../h/index.html" title="One step at a time — parked" class="nav-warn">H</a>
+    <a href="../i/index.html" title="Featured card — parked" class="nav-warn">I</a>
+    <a href="../j/index.html" title="Peeking tabs — parked" class="nav-warn">J</a>
+    <a href="../k/index.html" title="Split button — parked" class="nav-warn">K</a>
+    <a href="../l/index.html" title="Not right? — parked" class="nav-warn">L</a>
+    <a href="../m/index.html" title="Growing module — superseded" class="nav-muted">M</a>
+    <a href="../n/index.html" title="Short labels — parked" class="nav-warn">N</a>
+    <a href="../o/index.html" title="Samples column — parked" class="nav-warn">O</a>
+    <a href="../p/index.html" title="Signpost cards — superseded" class="nav-muted">P</a>
+    <a href="../q/index.html" title="Footer lines — parked" class="nav-warn">Q</a>
+    <a href="../r/index.html" title="Two questions — parked" class="nav-warn">R</a>
+    <a href="../s/index.html" title="Picture tiles — parked" class="nav-warn">S</a>
+    <a href="../t/index.html" title="Rosters box, clear guess — confirmed" class="nav-ok">T</a>
+  </nav>
+</div>
+<header data-bar></header>
+<div class="page">
+  <main>
+    <h1>Download HappyCamper</h1>
+    <p class="lede"><b data-version="Version ">Version 2.5.0</b><span id="tag"></span></p>
+    <details class="whatsnew" data-whatsnew style="margin-top:.5rem"><summary>What's new in <span data-whatsnew-label></span></summary><ul data-whatsnew-list></ul></details>
+
+    <div class="panel">
+      <div id="pick"></div>
+      <div class="get"><a class="btn" id="btn" href="#"></a><span class="file" id="file"></span></div>
+      <details class="steps">
+        <summary><b id="count"></b><span class="thumbs" id="thumbs"></span></summary>
+        <ol class="list" id="list"></ol>
+        <p class="why" id="why"></p>
+      </details>
+    </div>
+
+    <p class="try">Try it first: <a id="rosters" href="#">sample rosters</a> <a class="web" id="web" href="#">web demo ↗</a></p>
+  </main>
+  <footer data-foot></footer>
+</div>
+<script>
+  function render(DL) {
+    var K = window.DLkit;
+    document.getElementById("tag").textContent = DL.tagline;
+    document.getElementById("rosters").href = DL.links.rosters;
+    document.getElementById("web").href = DL.links.demo;
+    function show(id) {
+      var o = DL.byId(id), steps = DL.steps[o.steps];
+      var b = document.getElementById("btn");
+      b.href = DL.url(o.file);
+      b.innerHTML = DL.svg("i-down") + "Download for " + o.name;
+      document.getElementById("file").textContent = o.file;
+      document.getElementById("count").textContent = "Install in " + steps.length + " steps";
+      document.getElementById("thumbs").innerHTML = steps.map(function (s) { return K.pic(s); }).join("");
+      document.getElementById("list").innerHTML = steps.map(function (s) {
+        return "<li>" + K.pic(s) + "<span>" + s.text + (s.more ? "<small>" + s.more + "</small>" : "") + "</span></li>";
+      }).join("");
+      document.getElementById("why").innerHTML = DL.svg("i-shield") + "<span>" + DL.trustHTML(o.steps) + (o.steps === "mac" ? "<br>Which Mac? " + DL.whichMac : "") + "</span>";
+    }
+    var cur = DL.guess();
+    document.getElementById("pick").appendChild(K.picker(DL, cur, show));
+    show(cur);
+  }
+</script>
+<script src="../../dl.js"></script>
+</body>
+</html>
