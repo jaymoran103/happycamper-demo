@@ -7,7 +7,7 @@ See [the live site](https://eelslap.com) for the 2026 distribution, an in-browse
 See sections below for info on this repo and related codebases.
 
 
-TODO: Add image of live demo UI.
+![A mockup of the HappyCamper demo: filter panels on the left, a 20-camper schedule table on the right, with flagged cells in red](docs/demo-mockup.svg)
 
 
 ---

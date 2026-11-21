@@ -1,0 +1,718 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="1280" height="720" rx="0" fill="#d6e4cf" stroke="none" stroke-width="1"/>
+<rect x="10" y="10" width="1260" height="700" rx="8" fill="#e4e4e4" stroke="#9a9a9a" stroke-width="1"/>
+<path d="M10 18a8 8 0 0 1 8-8h1244a8 8 0 0 1 8 8v24H10z" fill="#ececec"/>
+<line x1="10" y1="42" x2="1270" y2="42" stroke="#c4c4c4"/>
+<circle cx="30" cy="26" r="6" fill="#ee6a5f"/>
+<circle cx="50" cy="26" r="6" fill="#f5bd4f"/>
+<circle cx="70" cy="26" r="6" fill="#61c454"/>
+<text x="640.0" y="31" font-size="14" font-weight="600" text-anchor="middle" fill="#4a4a4a">HappyCamper</text>
+<rect x="22" y="52" width="76" height="28" rx="4" fill="#f7f7f7" stroke="#a8a8a8" stroke-width="1"/>
+<text x="60.0" y="71" font-size="13" font-weight="400" text-anchor="middle" fill="#1f1f1f">Import</text>
+<rect x="106" y="52" width="76" height="28" rx="4" fill="#f7f7f7" stroke="#a8a8a8" stroke-width="1"/>
+<text x="144.0" y="71" font-size="13" font-weight="400" text-anchor="middle" fill="#1f1f1f">Export</text>
+<rect x="190" y="52" width="132" height="28" rx="4" fill="#f7f7f7" stroke="#a8a8a8" stroke-width="1"/>
+<text x="256.0" y="71" font-size="13" font-weight="400" text-anchor="middle" fill="#1f1f1f">View Settings</text>
+<rect x="330" y="52" width="164" height="28" rx="4" fill="#f7f7f7" stroke="#a8a8a8" stroke-width="1"/>
+<text x="412.0" y="71" font-size="13" font-weight="400" text-anchor="middle" fill="#1f1f1f">Column Visibility</text>
+<line x1="10" y1="90" x2="1270" y2="90" stroke="#c4c4c4"/>
+<rect x="11" y="91" width="279" height="618" rx="0" fill="#dcdcdc" stroke="none" stroke-width="1"/>
+<rect x="20" y="100" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M31 112l6 5l-6 5z" fill="#333"/>
+<text x="46" y="122" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Assignment Filter</text>
+<rect x="20" y="142" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M31 154l6 5l-6 5z" fill="#333"/>
+<text x="46" y="164" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Programs Filter</text>
+<rect x="228" y="149" width="44" height="20" rx="2" fill="#d39c9c" stroke="#8a8a8a" stroke-width="1"/>
+<text x="250" y="164" font-size="13" font-weight="600" text-anchor="middle" fill="#1f1f1f">1</text>
+<rect x="20" y="184" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M31 196l6 5l-6 5z" fill="#333"/>
+<text x="46" y="206" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Preference Filter</text>
+<rect x="228" y="191" width="44" height="20" rx="2" fill="#9cc49a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="250" y="206" font-size="13" font-weight="600" text-anchor="middle" fill="#1f1f1f">✓</text>
+<rect x="20" y="226" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M30 240l8 0l-4 7z" fill="#333"/>
+<text x="46" y="248" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Aquatic Conflicts</text>
+<rect x="228" y="233" width="44" height="20" rx="2" fill="#d39c9c" stroke="#8a8a8a" stroke-width="1"/>
+<text x="250" y="248" font-size="13" font-weight="600" text-anchor="middle" fill="#1f1f1f">2</text>
+<line x1="20" y1="262" x2="280" y2="262" stroke="#2b68b8" stroke-width="3"/>
+<rect x="28" y="270" width="244" height="42" rx="2" fill="#e6e6e6" stroke="#b0b0b0" stroke-width="1"/>
+<text x="36" y="287" font-size="12" font-weight="400" text-anchor="start" fill="#444">Checks that campers are eligible</text>
+<text x="36" y="303" font-size="12" font-weight="400" text-anchor="start" fill="#444">for their water activities</text>
+<rect x="30" y="324" width="14" height="14" rx="3" fill="#2b68b8" stroke="none" stroke-width="1"/>
+<path d="M33 331l3 3l5 -6" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="52" y="336" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Valid swim level</text>
+<rect x="30" y="348" width="14" height="14" rx="3" fill="#2b68b8" stroke="none" stroke-width="1"/>
+<path d="M33 355l3 3l5 -6" stroke="#fff" stroke-width="2" fill="none"/>
+<text x="52" y="360" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Invalid swim level</text>
+<rect x="20" y="386" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M31 398l6 5l-6 5z" fill="#333"/>
+<text x="46" y="408" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Swim Lessons</text>
+<rect x="228" y="393" width="44" height="20" rx="2" fill="#9cc49a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="250" y="408" font-size="13" font-weight="600" text-anchor="middle" fill="#1f1f1f">✓</text>
+<rect x="20" y="428" width="260" height="34" rx="3" fill="#cdcdcd" stroke="#a8a8a8" stroke-width="1"/>
+<path d="M31 440l6 5l-6 5z" fill="#333"/>
+<text x="46" y="450" font-size="14" font-weight="700" text-anchor="start" fill="#1f1f1f">Duplicate Activities</text>
+<rect x="228" y="435" width="44" height="20" rx="2" fill="#9cc49a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="250" y="450" font-size="13" font-weight="600" text-anchor="middle" fill="#1f1f1f">✓</text>
+<rect x="300" y="100" width="962" height="546" rx="0" fill="#ffffff" stroke="#8b8b8b" stroke-width="1"/>
+<rect x="300" y="100" width="110" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="355.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Preferred Name</text>
+<rect x="410" y="100" width="100" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="460.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Last Name</text>
+<rect x="510" y="100" width="160" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="590.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Program</text>
+<rect x="670" y="100" width="124" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="732.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Round 1</text>
+<rect x="794" y="100" width="124" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="856.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Round 2</text>
+<rect x="918" y="100" width="124" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="980.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Round 3</text>
+<rect x="1042" y="100" width="86" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="1085.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">SwimColor</text>
+<rect x="1128" y="100" width="134" height="26" rx="0" fill="#d4d4d4" stroke="#8b8b8b" stroke-width="1"/>
+<text x="1195.0" y="118" font-size="13" font-weight="700" text-anchor="middle" fill="#1f1f1f">Aquatic Conflicts</text>
+<rect x="300" y="126" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="126" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Andy</text>
+</svg>
+<rect x="410" y="126" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="126" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Adams</text>
+</svg>
+<rect x="510" y="126" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="126" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="126" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="126" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="794" y="126" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="126" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Arts &amp; Crafts</text>
+</svg>
+<rect x="918" y="126" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="126" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Paddle Sports</text>
+</svg>
+<rect x="1042" y="126" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="126" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="126" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="126" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="152" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="152" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Bob</text>
+</svg>
+<rect x="410" y="152" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="152" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Baker</text>
+</svg>
+<rect x="510" y="152" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="152" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="152" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="152" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gold Swimming</text>
+</svg>
+<rect x="794" y="152" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="152" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dance</text>
+</svg>
+<rect x="918" y="152" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="152" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="1042" y="152" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="152" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="152" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="152" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="178" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="178" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Charlie</text>
+</svg>
+<rect x="410" y="178" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="178" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Cooper</text>
+</svg>
+<rect x="510" y="178" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="178" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="178" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="178" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Arts &amp; Crafts</text>
+</svg>
+<rect x="794" y="178" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="178" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="918" y="178" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="178" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sailing</text>
+</svg>
+<rect x="1042" y="178" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="178" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="178" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="178" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="204" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="204" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drew</text>
+</svg>
+<rect x="410" y="204" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="204" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Davis</text>
+</svg>
+<rect x="510" y="204" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="204" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="204" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="204" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sports</text>
+</svg>
+<rect x="794" y="204" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="204" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Horseback Riding</text>
+</svg>
+<rect x="918" y="204" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="204" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Skiing</text>
+</svg>
+<rect x="1042" y="204" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="204" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="204" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="204" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="230" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="230" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ethan</text>
+</svg>
+<rect x="410" y="230" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="230" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Evans</text>
+</svg>
+<rect x="510" y="230" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="230" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="230" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="230" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="794" y="230" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="230" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="918" y="230" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="230" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="1042" y="230" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="230" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="230" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="230" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="256" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="256" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Frank</text>
+</svg>
+<rect x="410" y="256" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="256" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Foster</text>
+</svg>
+<rect x="510" y="256" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="256" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="256" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="256" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Horseback Riding</text>
+</svg>
+<rect x="794" y="256" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="256" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sailing</text>
+</svg>
+<rect x="918" y="256" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="256" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Paddle Sports</text>
+</svg>
+<rect x="1042" y="256" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="256" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="256" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="256" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="282" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="282" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gabe</text>
+</svg>
+<rect x="410" y="282" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="282" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Garcia</text>
+</svg>
+<rect x="510" y="282" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="282" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="282" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="282" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="794" y="282" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="282" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Skiing</text>
+</svg>
+<rect x="918" y="282" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="282" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Arts &amp; Crafts</text>
+</svg>
+<rect x="1042" y="282" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="282" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="282" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="282" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="308" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="308" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Henry</text>
+</svg>
+<rect x="410" y="308" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="308" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Harrison</text>
+</svg>
+<rect x="510" y="308" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="308" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="308" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="308" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sports</text>
+</svg>
+<rect x="794" y="308" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="308" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="918" y="308" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="308" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dance</text>
+</svg>
+<rect x="1042" y="308" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="308" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="308" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="308" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="334" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="334" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ike</text>
+</svg>
+<rect x="410" y="334" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="334" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ingram</text>
+</svg>
+<rect x="510" y="334" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="334" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="334" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="334" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Swimming</text>
+</svg>
+<rect x="794" y="334" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="334" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sailing</text>
+</svg>
+<rect x="918" y="334" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="334" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sports</text>
+</svg>
+<rect x="1042" y="334" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="334" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Red</text>
+</svg>
+<rect x="1128" y="334" width="134" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="334" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sailing</text>
+</svg>
+<rect x="300" y="360" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="360" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Jeremy</text>
+</svg>
+<rect x="410" y="360" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="360" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Johnson</text>
+</svg>
+<rect x="510" y="360" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="360" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="360" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="360" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="794" y="360" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="360" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sports</text>
+</svg>
+<rect x="918" y="360" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="360" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gold Swimming</text>
+</svg>
+<rect x="1042" y="360" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="360" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="360" width="134" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="360" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gold Swimming</text>
+</svg>
+<rect x="300" y="386" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="386" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Kyle</text>
+</svg>
+<rect x="410" y="386" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="386" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Kim</text>
+</svg>
+<rect x="510" y="386" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="386" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Counselor-In-Training</text>
+</svg>
+<rect x="670" y="386" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="386" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dance</text>
+</svg>
+<rect x="794" y="386" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="386" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Paddle Sports</text>
+</svg>
+<rect x="918" y="386" width="124" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="386" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="1042" y="386" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="386" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="386" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="386" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="412" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="412" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Liam</text>
+</svg>
+<rect x="410" y="412" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="412" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Lopez</text>
+</svg>
+<rect x="510" y="412" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="412" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Counselor-In-Training</text>
+</svg>
+<rect x="670" y="412" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="412" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Skiing</text>
+</svg>
+<rect x="794" y="412" width="124" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="412" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="918" y="412" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="412" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="1042" y="412" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="412" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="412" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="412" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="438" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="438" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Max</text>
+</svg>
+<rect x="410" y="438" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="438" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Miller</text>
+</svg>
+<rect x="510" y="438" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="438" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="438" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="438" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Swimming</text>
+</svg>
+<rect x="794" y="438" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="438" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sports</text>
+</svg>
+<rect x="918" y="438" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="438" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="1042" y="438" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="438" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Red</text>
+</svg>
+<rect x="1128" y="438" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="438" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="464" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="464" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Nate</text>
+</svg>
+<rect x="410" y="464" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="464" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Nguyen</text>
+</svg>
+<rect x="510" y="464" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="464" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="464" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="464" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Arts &amp; Crafts</text>
+</svg>
+<rect x="794" y="464" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="464" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gold Swimming</text>
+</svg>
+<rect x="918" y="464" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="464" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="1042" y="464" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="464" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="464" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="464" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="490" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="490" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Owen</text>
+</svg>
+<rect x="410" y="490" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="490" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ortiz</text>
+</svg>
+<rect x="510" y="490" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="490" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="490" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="490" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="794" y="490" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="490" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dance</text>
+</svg>
+<rect x="918" y="490" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="490" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Skiing</text>
+</svg>
+<rect x="1042" y="490" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="490" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="490" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="490" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="516" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="516" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Pete</text>
+</svg>
+<rect x="410" y="516" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="516" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Parker</text>
+</svg>
+<rect x="510" y="516" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="516" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Counselor-In-Training</text>
+</svg>
+<rect x="670" y="516" width="124" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="516" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="794" y="516" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="516" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="918" y="516" width="124" height="26" rx="0" fill="#d39c9c" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="516" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="1042" y="516" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="516" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="516" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="516" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="542" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="542" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ryan</text>
+</svg>
+<rect x="410" y="542" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="542" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Reed</text>
+</svg>
+<rect x="510" y="542" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="542" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="542" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="542" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Paddle Sports</text>
+</svg>
+<rect x="794" y="542" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="542" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Archery</text>
+</svg>
+<rect x="918" y="542" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="542" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dance</text>
+</svg>
+<rect x="1042" y="542" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="542" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="542" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="542" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="568" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="568" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Sam</text>
+</svg>
+<rect x="410" y="568" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="568" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Scott</text>
+</svg>
+<rect x="510" y="568" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="568" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Traditional Camp</text>
+</svg>
+<rect x="670" y="568" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="568" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Drama</text>
+</svg>
+<rect x="794" y="568" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="568" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Horseback Riding</text>
+</svg>
+<rect x="918" y="568" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="568" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="1042" y="568" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="568" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">White</text>
+</svg>
+<rect x="1128" y="568" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="568" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="594" width="110" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="594" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Ricky</text>
+</svg>
+<rect x="410" y="594" width="100" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="594" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Nuts</text>
+</svg>
+<rect x="510" y="594" width="160" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="594" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">KYBO Camp</text>
+</svg>
+<rect x="670" y="594" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="594" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Fishing</text>
+</svg>
+<rect x="794" y="594" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="594" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Trash Cleanup</text>
+</svg>
+<rect x="918" y="594" width="124" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="594" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Skiing</text>
+</svg>
+<rect x="1042" y="594" width="86" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="594" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Blue</text>
+</svg>
+<rect x="1128" y="594" width="134" height="26" rx="0" fill="#ececec" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="594" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="620" width="110" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="300" y="620" width="109" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Doug</text>
+</svg>
+<rect x="410" y="620" width="100" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="410" y="620" width="99" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Dale</text>
+</svg>
+<rect x="510" y="620" width="160" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="510" y="620" width="159" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">KYBO Camp</text>
+</svg>
+<rect x="670" y="620" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="670" y="620" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Brooms</text>
+</svg>
+<rect x="794" y="620" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="794" y="620" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Birds</text>
+</svg>
+<rect x="918" y="620" width="124" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="918" y="620" width="123" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Advanced Brooms</text>
+</svg>
+<rect x="1042" y="620" width="86" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1042" y="620" width="85" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Gray</text>
+</svg>
+<rect x="1128" y="620" width="134" height="26" rx="0" fill="#d9d9d9" stroke="#9a9a9a" stroke-width="0.6"/>
+<svg x="1128" y="620" width="133" height="26" overflow="hidden">
+<text x="8" y="18" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">–</text>
+</svg>
+<rect x="300" y="660" width="108" height="28" rx="4" fill="#f7f7f7" stroke="#a8a8a8" stroke-width="1"/>
+<text x="354" y="679" font-size="13" font-weight="400" text-anchor="middle" fill="#1f1f1f">Reset Display</text>
+<text x="422" y="679" font-size="13" font-weight="400" text-anchor="start" fill="#1f1f1f">Showing 20 of 20 campers</text>
+</svg>
