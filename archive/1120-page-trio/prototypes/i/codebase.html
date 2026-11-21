@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HappyCamper Codebase</title>
+<link rel="icon" href="../a/icon.png">
+<style>
+  :root {
+    --accent: #1a672c; --accent-dark: #2f7340; --ink: #26302a; --soft: #43524a;
+    --paper: #cfe3c9; --card: #ffffff; --line: #b9d3b5;
+    --d-box: #ffffff; --d-app: #e3f0df; --d-stroke: #7fa77f; --d-ink: #26302a; --d-soft: #5a6b5e; --d-edge: #2f7340;
+    --d-cell: #e6e6e6; --d-cell2: #cdcdcd; --d-flag: #f0b9b9; --d-head: #c8c8c8; --d-host: #f4f9f2; --d-grid: #8a8a8a;
+    --d-web: #eef5fb; --d-web-edge: #2b68b8; --d-next: #f4f9f2;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 Verdana, Geneva, sans-serif; }
+  a { color: var(--accent-dark); }
+  :focus-visible { outline: 3px solid #2b68b8; outline-offset: 2px; }
+  .page { width: min(46rem, 100%); margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+  /* Header bar: solid green, fixed to the top */
+  .bar { position: sticky; top: 0; z-index: 10; background: var(--accent); box-shadow: 0 2px 8px rgba(20,60,30,.25); }
+  .bar .in { width: min(1120px, 100%); margin: 0 auto; padding: .5rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .bar .home { display: flex; align-items: center; gap: .6rem; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+  .bar .home img { width: 36px; height: 36px; }
+  .bar nav { display: flex; gap: .35rem; font-size: .82rem; font-weight: 700; }
+  .bar nav a, .bar nav span { padding: .3rem .85rem; border-radius: 999px; text-decoration: none; }
+  .bar nav a { color: #fff; border: 1px solid rgba(255,255,255,.45); }
+  .bar nav a:hover { background: rgba(255,255,255,.15); }
+  .bar nav span { color: var(--accent); background: #fff; border: 1px solid #fff; }
+  @media (max-width: 520px) { .bar .home span { display: none; } .bar nav a, .bar nav span { padding: .25rem .6rem; } }
+
+  .overview { margin-top: 2.25rem; }
+  .overview h1 { margin: 0 0 .4rem; font-size: 1.9rem; line-height: 1.2; }
+  .overview p { margin: 0; font-size: 1.05rem; color: var(--soft); }
+
+  section { margin-top: 2.75rem; }
+  h2 { font-size: 1.3rem; line-height: 1.3; margin: 0 0 .5rem; }
+  section p { margin: 0 0 .9rem; }
+  .figure { margin: 1.1rem 0 1.2rem; overflow-x: auto; }
+  .figure svg { display: block; width: 100%; min-width: 560px; height: auto; font-family: Verdana, Geneva, sans-serif; }
+
+  /* Timeline repo pills: links that read "View in GitHub" on hover */
+  .pill rect { fill: var(--d-app); stroke: var(--d-stroke); transition: fill .15s, stroke .15s; }
+  .pill text { fill: var(--d-ink); }
+  .pill .hov { font-weight: 700; }
+  .pill { cursor: pointer; }
+  .pill:hover rect, .pill:focus-visible rect { fill: var(--accent); stroke: var(--accent); }
+  .pill:hover text, .pill:focus-visible text { fill: #ffffff; }
+  .pill:hover .lbl, .pill:focus-visible .lbl { display: none; }
+  .pill:hover .hov, .pill:focus-visible .hov { display: inline; }
+
+  .era { margin: 0 0 .9rem; }
+  .era b { color: var(--accent); }
+
+  footer.sitefoot { margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .85rem; color: var(--soft); }
+  footer.sitefoot a { color: inherit; }
+  footer.sitefoot div + div { margin-top: .4rem; }
+
+  /* Round chrome: the ui-iterator letter strip. Not part of the site. */
+  .proto-bar { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; padding: .35rem 1.25rem; font: 12px/1.4 system-ui, sans-serif; background: #22302a; color: #dfe9dd; }
+  .proto-bar span { flex: 1; min-width: 12rem; opacity: .75; }
+  .proto-bar nav { display: flex; gap: .3rem; }
+  .proto-bar a { color: #fff; padding: 0 .4rem; border-radius: 3px; }
+  .proto-bar a[aria-current] { background: rgba(255,255,255,.18); }
+</style>
+</head>
+<body>
+<div class="proto-bar" data-generated="build.mjs — edit round.json, not this">
+  <b>I · Three columns</b>
+  <span>The diagram as three columns: HappyCamper on Java, the three CSVs stacked, and the camp app, Sheets and Excel stacked in an Internet box that mirrors Your device. Your history text. F's green bar, with the logo straight on the green.</span>
+  <nav>
+    <a href="../../index.html">Lineage</a>
+    <a href="../a/index.html" title="First trio — superseded" class="nav-muted">A</a>
+    <a href="../b/codebase.html" title="Codebase: compare — superseded" class="nav-muted">B</a>
+    <a href="../c/codebase.html" title="Codebase: your computer — superseded" class="nav-muted">C</a>
+    <a href="../d/codebase.html" title="Codebase: lanes — superseded" class="nav-muted">D</a>
+    <a href="../e/codebase.html" title="Merged: light bar — superseded" class="nav-muted">E</a>
+    <a href="../f/codebase.html" title="Merged: green bar, sidecar — superseded" class="nav-muted">F</a>
+    <a href="../g/codebase.html" title="Icons — superseded" class="nav-muted">G</a>
+    <a href="../h/codebase.html" title="Labels and short sections — superseded" class="nav-muted">H</a>
+    <a href="codebase.html" aria-current="page" title="Three columns — superseded" class="nav-muted">I</a>
+    <a href="../j/codebase.html" title="Data Note — parked" class="nav-warn">J</a>
+  </nav>
+</div>
+<header class="bar">
+  <div class="in">
+    <a class="home" href="../a/index.html" aria-label="HappyCamper, download page"><img src="../a/icon.png" alt=""><span>HappyCamper</span></a>
+    <nav aria-label="HappyCamper pages"><a href="../a/index.html">Download</a><a href="../a/demo.html">Demo</a><span aria-current="page">Codebase</span></nav>
+  </div>
+</header>
+<div class="page">
+  <main>
+    <div class="overview">
+      <h1>How it's built</h1>
+      <p>What the app does with your files, why it runs the way it does, and how it came to be.</p>
+    </div>
+
+    <section>
+      <h2>Built on spreadsheets</h2>
+      <p>At its core, HappyCamper merges two tables into a more helpful one, then gives you good tools to analyze it and make impactful revisions. The user experience closely matches other table viewers. If you're a spreadsheet wizard, just export the merged CSV and use the new columns to do your own magic in another editor.</p>
+      <div class="figure">
+        <svg data-name="i-how-it-works" viewBox="0 0 680 350" role="img" aria-label="Three columns. On your device: HappyCamper, running on Java, and three CSV files stacked together: a camper roster, an activity roster and a merged roster. The two rosters go into HappyCamper, and the merged roster goes both ways. On the internet: your camp's app, Google Sheets and Excel, which the CSV files come from and go to.">
+          <defs>
+            <symbol id="csv" viewBox="0 0 70 84">
+              <path d="M8,2 H50 L68,20 V78 Q68,82 64,82 H12 Q8,82 8,78 Z" fill="#f2f2f2" stroke="#4a4a4a" stroke-width="2"/>
+              <path d="M50,2 V20 H68" fill="#d9d9d9" stroke="#4a4a4a" stroke-width="2" stroke-linejoin="round"/>
+              <rect x="20" y="26" width="38" height="34" fill="#a6db8f" stroke="#3b6e34" stroke-width="1.5"/>
+              <rect x="20" y="26" width="38" height="8" fill="#79c162" stroke="#3b6e34" stroke-width="1.5"/>
+              <path d="M33,26 V60 M46,26 V60 M20,43 H58 M20,51 H58" stroke="#3b6e34" stroke-width="1.5"/>
+              <rect x="1" y="52" width="40" height="20" rx="4" fill="#7cc96a" stroke="#2c5a2c" stroke-width="2"/>
+              <text x="21" y="66.5" text-anchor="middle" font-size="12" font-weight="700" fill="#1d331a" font-family="Verdana, Geneva, sans-serif">CSV</text>
+            </symbol>
+            <symbol id="camp" viewBox="0 0 60 60">
+              <rect x="0" y="0" width="60" height="60" rx="10" fill="#a43fc4"/>
+              <path d="M22,9 H51 V37" fill="none" stroke="#1d1d1d" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M9,22 V51 H38" fill="none" stroke="#1d1d1d" stroke-width="3.5" stroke-linejoin="round"/>
+              <g font-family="Verdana, Geneva, sans-serif" font-size="10.5" font-weight="700" fill="#1d1d1d">
+                <text x="16" y="24">your</text><text x="16" y="35">camp</text><text x="16" y="46">app</text>
+              </g>
+            </symbol>
+            <symbol id="sheets" viewBox="0 0 40 54">
+              <path d="M3,0 H27 L40,13 V51 Q40,54 37,54 H3 Q0,54 0,51 V3 Q0,0 3,0 Z" fill="#1fa463"/>
+              <path d="M27,0 V13 H40 Z" fill="#8ed1b1"/>
+              <rect x="10" y="24" width="20" height="18" fill="#ffffff"/>
+              <path d="M20,24 V42 M10,30 H30 M10,36 H30" stroke="#1fa463" stroke-width="2"/>
+            </symbol>
+            <symbol id="excel" viewBox="0 0 50 50">
+              <rect x="12" y="0" width="38" height="50" rx="4" fill="#21a366"/>
+              <rect x="31" y="0" width="19" height="25" rx="0" fill="#33c481"/>
+              <rect x="12" y="25" width="38" height="25" fill="#185c37"/>
+              <rect x="31" y="25" width="19" height="12.5" fill="#107c41"/>
+              <rect x="0" y="11" width="28" height="28" rx="3" fill="#107c41"/>
+              <path d="M8,18 L20,32 M20,18 L8,32" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="java" viewBox="0 0 30 36">
+              <path d="M12,14 Q8,10 12,6.5 Q16,3 12,0" fill="none" stroke="#e76f00" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M18,14 Q14,10 18,7 Q21,4.5 18.5,2" fill="none" stroke="#e76f00" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M5,17 H24 V23 Q24,31 14.5,31 Q5,31 5,23 Z" fill="none" stroke="#5382a1" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M24,19 Q29,19 29,22.5 Q29,26 23.5,26" fill="none" stroke="#5382a1" stroke-width="2.2"/>
+              <path d="M1,33.5 Q15,37.5 28,33.5" fill="none" stroke="#5382a1" stroke-width="2.2" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="laptop" viewBox="0 0 30 20">
+              <rect x="5" y="1" width="20" height="13" rx="1.5" fill="#ffffff" stroke="#2f7340" stroke-width="2"/>
+              <path d="M1,16 H29 L27,19.5 H3 Z" fill="#2f7340"/>
+            </symbol>
+            <symbol id="globe" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#ffffff" stroke="#2b68b8" stroke-width="2"/>
+              <ellipse cx="12" cy="12" rx="4.5" ry="10" fill="none" stroke="#2b68b8" stroke-width="1.6"/>
+              <path d="M2,12 H22 M4,7 H20 M4,17 H20" stroke="#2b68b8" stroke-width="1.6"/>
+            </symbol>
+          </defs>
+
+          <rect x="10" y="10" width="420" height="330" rx="12" fill="var(--d-host)" stroke="var(--d-edge)" stroke-width="2"/>
+          <use href="#laptop" x="26" y="22" width="30" height="20"/>
+          <text x="64" y="38" font-size="12" font-weight="700" fill="var(--d-ink)">Your device</text>
+
+          <rect x="450" y="10" width="220" height="330" rx="12" fill="var(--d-web)" stroke="var(--d-web-edge)" stroke-width="2"/>
+          <use href="#globe" x="468" y="21" width="22" height="22"/>
+          <text x="498" y="38" font-size="12" font-weight="700" fill="var(--d-ink)">Internet</text>
+
+          <rect x="30" y="56" width="190" height="228" rx="8" fill="var(--d-app)" stroke="var(--d-edge)" stroke-width="2"/>
+          <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAADoAEAAwAAAAEAAQAAoAIABAAAAAEAAAAwoAMABAAAAAEAAAAwAAAAANs3bAwAAAHLaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA2LjAuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj41MTI8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+NTEyPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CgCF4JgAAAw8SURBVGgF7RlpcFXl9Xx3v28lG2ETiJ0ADUIUAoLSFqyCwjhabdGKW0XL2FamrTIIgwJjUxbbCmNd0HZQy+jIjAjjjiiLYsXiqMgeBAM1ECXry3vv7l/Pue+98BJfINv0F2fy7v3ud8939nO+c78AnIfzFuiRBVhnVx/dtLC4UPNmKP0+ncjlOGecua7Ha5nAWjyPcYFxF5jgcpd7Hv75Y87xzlyBgeM6OBbwPeFx5gkeuP6zh+hC1Gju9+TXzme7Q82Pz8vH9S7S9ESReTYXEuPGz9rDlizxcskq5ZrMzO1es0YeMrB6kia5vxS4PV2TYKCgOwCqDShECo1nsNvds+fPOnbAYoXgaOGYGQqrmtGscM6RPNJHNhFRMPd9snYWUn+lHQf/MacCV905t3TeZcoNI4cevRGNUaHLErMcDoblgmw4wNDArQrkotqlOaQlSyCIclhAwcElRzJgaaVl7qmmpFzYEck2Ctz+xwXDGppif25JmlearhzVZAZJAyBhodUBLSLgTUDKnQ08EuJcuIjDQQKSHRwLH2hAjFKAMQhMElGK3NBGgW+O19zIReHGeDwJRqMBbpMMGLFpIAUc4DFkIqNCFEJoqTYC+sL6l8wi/32uaR+BXiADEtK0PbAMAywPGTKhlayIrrBdF5kCXHPTrAmG4V4xpGTEk8+tWtJIc20U4InYi7YoDE9afKrKeX/RMYCZGI9kFAIBibdYwMW0R1KzHV/TumSW50Jk3AZTdeGk0gxOQwO0xE20+Jl8DUoCGM11DSOvu/Pa5pbY83o4mmfYLQeQ1qtE74yv8OH9NzdU7+h/7J57+eHKiGs9Zgn6xyBJXFcxRgVEpcSiFSRYZ36I1hnwGNmRAXfIs2iw9CIZrR9L2psG3/yjfpPyYy8kHchjokh17mSGbhsPfHHX5cN3Hq5aNSoZn+ZsrNr/8TvB1wZOG7eheHjxOIHZ1wQ0MQQqKYFaZLhkKGXfO3qXns9+TckqSTJIsgIehhOFDNmJYyE1mfD0mD9c3xDW2coVfT31+SNh2Py1eEoE5VCGXUoBztnem8pvVmqq/6Iyd0ANxrcgSSNF2xx5YuP22gOe+LsJS2Y/ZBu1v5INsQxNgEHKBWKGuSBgYtNQQMbkH9IOf4zSXURFKaAFumPKpMcU5IhDa/BniQJzbJu7lonBKUii48WFaOjlifdeXaKC8xsbi4iqB2HuT/JhYom9f/ydyxvaKLD36qGzNW48y7GEkfpBLGsx28GdBvNVFosDrrdq63WrK2YCPJhZ2Mk77j9LWFnZPla0/zsW7h9jep7BlNBgJulJJmkmqz8SF6DYBq5jBNXXivF4GMrvnjKu7xBtqcbcSUmTZBIBtAiyZDCqv/xpNm/fA7g5Fiq4UcbTvg0pIhiojO1xrAwmBAeVDNTWzKmEOffPzl7ciTFHBdJUs7H3ZT/geA/+/uXP1bw3dkx+MrZBSsjRpEHJjMv1MPpSxi2Cg+lIu33E9IVcDlag8OkWLuxR/CfERS9EZNTaMkEZMxnk+c9CcOqs23btrZqWvbi3x1u3TpbCnr1CLfgmaoeqURDcikUNd/4QxSWV2oQN8pfZfH2RL9n4eaMlB+bhHmhTceG4oeiaBoW3z4PA/U8A9C+FiPGpPKzhgb9Wvz4qL5tAb47Lkk23BDS40jYwMQINIBUeA5ZPDpRAxMKB/qhuZPmo2RlI2xzg4reObTZAWqt5NogXDIPoorVQPPthzAEZihrXwYDaRdBHrBpZoAldzYMz3M4yqlp/SVFIdZdiMaWgAaA6EXZAHnwQxLyjWKnojbi3dPpcM5tMqwI02WjaS7zJPz9ctPwVkMZOBcX6Gi60lkH/5n9g0TDBsQVQZO++pnfHTMgm0hvj/ChfEAjAUBt7Lh9EbCFCMuatB2L+UWAD9gJXYx+150UR0waqk3xS2DbekBJbIlrT47j5ngSvEbWnhEJsRaH+iO2sFfKvLJmyrcMepQ3RczzUvD5mbEHI+UBgnk59IrmARSRUAGsMjkW0PhbF481JZWLRmJ012eTaeIBeDNHZh1Lt4pfD5jJg7rdY0dWUJdKYlsUxP+DyArvht9mEujumxA2qznJF4a3CAxqJBVLCk4WpO3UcfWl74Ynn9xSgSatp49/shF0n4g7pByQRDKYI0nv8kgFN8RaefmfsCHruCYwym24J6Zi42HP5gBL7oZOWTMSd3zCErQfMEak6245ZTgUKKw4fTNpKJUPX+UAuJQVkRMcx7XeywvJ1yV65fv0vsN52D45sGN03oLhLW/sf0kETgWkpPtSxuLZgWI6+oKLiGayp34ecChBafV3pU0ZS+FCi3ocAMQWMS8oDAtskL/Brr45W3Zqa6fq1ICgs0HUY6mQSl3qNMPJIg6AKYDnyM9Hyrbsyc+3vHSpQMuU51Fyb5zosQZbwQwkJsgAaHC1FxiJQVPeR0++VD0w9df568u2K8UHNm+NYlLUISJAFkTZ5HceUuFaCnWiJR5alEHJfO1SA0KPl2z42TPEJIbNFExOqDOnQIsupKrtAB++R3ORzz+5eM1YOSfYyWc5KXAzPTJ6RkylxTVtd2nf8m6dyU0nNnlUBQqnj+cvQEgck/Lz0wa/PqETaBRRKisRur3/34hkphHNfS4Z6twU1fkWbxKXQSUvjJ25C3B62R7xwLmrnVGDI6DcaTEeej+chLrZIKcF1TDT8kRL0tSaJXNQFd2Vn2ozaLZcW67K72D95IOnIq+0T1xGMhK0sYB0kbrZS51SAkCPlH75mGeKLIlUHBFKEkcXQGwSWzUHTWVleJ9qMICQpcQe3Ji6GI21aGY8KGEqmIVYWjNn+b5/4OS6dUoBoNJrBRU6S1VBy+cyIcXqnpPcOfpRr2GbUvdlxm9H0dvl4VYZft0lcopE2hIT7jZUUPjtyMvQY0ewMdFqBARVbjluWspjM79udXE8VCSsTKUQtAH4H6bpmPXps7WTsgdsCJa4se8uk7MRFj2ZCkbzqesw1HG1h+bTN8barO37qtAJE4pP6nz5nGuydTCiRJn7dTlPx2wxVmJQ/qO7e9iyHXejcqqnsTOLiGsFv1lKYRBO/KNdj5Xu7/dqzPfvGPBtC+3f1e348Kqwa1HhF6QiHlOAxOi/CEwUci+gU12V1zQnhsqIZXxym9bWbSoqjkfAuWeJD/Ngn72HoZGLfX+MJdQ3xwIS+Y7cdac/zbM9d8gARyh+940vLkldSsvlAwrRrMxSVFWiqtxw/J32kQKTfg6pqtwpP+4i/aeFaAoa0kpb0aFeFp7VdVoAWHakJrrYSwn8o6XxAKm3aDNxdAypcf//E52/YUsXLThSvvKdRGIeHF3TAhudw7RLXTLDPT9Qp+OnXdeiWApRklqs8gG2GmbPNIK/g+bvsFC4qatz1Q1MrDR7r8xCcCt8BXFNA0BHBx6HkZ67pagtHTtnW0nXxu+kBYhQevWOHZYtPfa/NwA6czk2t+n7gNf+gLLKt0km8/mwNw6ORb/PugtgFK8ATByGOgd/rWPNN4eXo6O1vdUd4WtMtD2SYOfF+f7KS7HBrmyGhWdUIuHVDwW0uAlUS5WhxcFDLkw/tMR67D8ItJ/EjfSrE8lYDD00Fx2D1lhF4OEOvO/ceKRC59NU601Hm4/GRR+dwXtMAcBsqgHuFKAuecWCc6EH1YlC13Wz3ZvAq7wBr5waAwBCI91nsNIo3z+1T8f5X3RE8s6ZHChCRyOgPNhqJwDqx5SJwT4/AM00VBcRTNEHE/yt54LluhZIXORgIhrCeHoem5XPAWVcJZl39G0Wlv38pI0h37z1WgBibh66ZGz816J8SHoWLdCJKn6J4FEifnviftNJhk0bEsOrXMzyiYdj9Nb20yjk9//rVmOrpj4Huit/DHMiwzZ/5YFNoRuXdSUe4D0nGVFQEtCDWdw3wlDJY23dAIZ7k7qeWR8N3pqy9dNH6L7Zm1vfk3iseyAgQnb7870lPvNZ22cGArkCLGIFHP3JgzhY+Whf5bhUbniQXvktokcWZNT2996oCJEze9GXb6zx+1eHvnE2P4DHUq1/JYFl2RaMY2Eebty0pyy997dCxngqeWd/rChDhQdNX/nf4zOqZB057lX2iIVeXxdJDUqSqkUvrLLnv0xnmvXFP9wK9QSo3jZ/NmXudEU+G3lo3ECtO7n9W5155fva8Bf4vFvgfCWna1YKVc08AAAAASUVORK5CYII=" x="48" y="66" width="24" height="24"/>
+          <text x="78" y="83" font-size="14" font-weight="700" fill="var(--d-ink)">HappyCamper</text>
+          <g stroke="var(--d-grid)" stroke-width="1">
+            <rect x="50" y="100" width="150" height="14" fill="var(--d-head)"/>
+            <rect x="50" y="114" width="150" height="14" fill="var(--d-cell)"/>
+            <rect x="50" y="128" width="150" height="14" fill="var(--d-cell2)"/>
+            <rect x="50" y="142" width="150" height="14" fill="var(--d-cell)"/>
+            <rect x="50" y="156" width="150" height="14" fill="var(--d-cell2)"/>
+            <rect x="50" y="170" width="150" height="14" fill="var(--d-cell)"/>
+            <rect x="50" y="184" width="150" height="14" fill="var(--d-cell2)"/>
+            <rect x="50" y="198" width="150" height="14" fill="var(--d-cell)"/>
+            <rect x="50" y="212" width="150" height="14" fill="var(--d-cell2)"/>
+            <rect x="50" y="226" width="150" height="14" fill="var(--d-cell)"/>
+            <rect x="50" y="240" width="150" height="14" fill="var(--d-cell2)"/>
+            <rect x="140" y="170" width="30" height="14" fill="var(--d-flag)"/>
+            <line x1="80" y1="100" x2="80" y2="254"/><line x1="110" y1="100" x2="110" y2="254"/>
+            <line x1="140" y1="100" x2="140" y2="254"/><line x1="170" y1="100" x2="170" y2="254"/>
+          </g>
+          <rect x="30" y="292" width="190" height="38" rx="8" fill="var(--d-box)" stroke="var(--d-stroke)"/>
+          <use href="#java" x="96" y="295" width="27" height="32"/>
+          <text x="130" y="316" font-size="12" font-weight="700" fill="var(--d-ink)">Java</text>
+
+          <use href="#csv" x="300" y="56" width="56" height="67"/>
+          <text x="328" y="138" text-anchor="middle" font-size="11" fill="var(--d-ink)">Camper roster</text>
+          <use href="#csv" x="300" y="146" width="56" height="67"/>
+          <text x="328" y="228" text-anchor="middle" font-size="11" fill="var(--d-ink)">Activity roster</text>
+          <use href="#csv" x="300" y="236" width="56" height="67"/>
+          <text x="328" y="318" text-anchor="middle" font-size="11" fill="var(--d-ink)">Merged roster</text>
+
+          <path d="M300,90 H224" stroke="var(--d-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-edge)" transform="translate(220,90) rotate(180)"/>
+          <path d="M300,180 H224" stroke="var(--d-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-edge)" transform="translate(220,180) rotate(180)"/>
+          <path d="M224,270 H296" stroke="var(--d-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-edge)" transform="translate(220,270) rotate(180)"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-edge)" transform="translate(300,270)"/>
+
+          <use href="#camp" x="530" y="60" width="60" height="60"/>
+          <use href="#sheets" x="540" y="153" width="40" height="54"/>
+          <use href="#excel" x="535" y="245" width="50" height="50"/>
+
+          <path d="M530,90 H362" stroke="var(--d-web-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-web-edge)" transform="translate(358,90) rotate(180)"/>
+          <path d="M540,180 H362" stroke="var(--d-web-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-web-edge)" transform="translate(358,180) rotate(180)"/>
+          <path d="M358,270 H530" stroke="var(--d-web-edge)" stroke-width="2"/>
+          <polygon points="0,0 -9,-4.2 -9,4.2" fill="var(--d-web-edge)" transform="translate(534,270)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section>
+      <h2>Secure and open source</h2>
+      <p>As an open source project, HappyCamper is easy to access, audit, and trust.</p>
+      <p>The app is designed for data safety: it can't reach the internet, file imports and exports are manual user actions, and no roster data is stored between runs.</p>
+    </section>
+
+    <section>
+      <h2>Free and future proof</h2>
+      <p>I picked this stack to prioritize flexible access: as a standalone app it is quick to download, then never dependent on an internet connection or update again. The core logic is simple and extensible, ready to be modified to suit new camps or new needs.</p>
+    </section>
+
+    <section>
+      <h2>History</h2>
+      <div class="figure">
+        <svg data-name="i-timeline" viewBox="0 0 680 155" role="img" aria-label="Timeline: a validation script in 2024, a desktop app in 2025 (happycamper-public, v2.2), an analysis platform in 2026 (happycamper-heart, v2.5), and a browser version next.">
+          <line x1="40" y1="92" x2="510" y2="92" stroke="var(--d-edge)" stroke-width="3"/>
+          <line x1="510" y1="92" x2="650" y2="92" stroke="var(--d-edge)" stroke-width="3" stroke-dasharray="6 6"/>
+
+          <circle cx="80" cy="92" r="8" fill="var(--d-edge)"/>
+          <text x="80" y="40" text-anchor="middle" font-size="12" fill="var(--d-soft)">2024</text>
+          <text x="80" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="var(--d-ink)">Validation script</text>
+
+          <circle cx="245" cy="92" r="8" fill="var(--d-edge)"/>
+          <text x="245" y="40" text-anchor="middle" font-size="12" fill="var(--d-soft)">2025</text>
+          <text x="245" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="var(--d-ink)">Desktop app</text>
+
+          <circle cx="430" cy="92" r="8" fill="var(--d-edge)"/>
+          <text x="430" y="40" text-anchor="middle" font-size="12" fill="var(--d-soft)">2026</text>
+          <text x="430" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="var(--d-ink)">Analysis platform</text>
+
+          <circle cx="600" cy="92" r="8" fill="var(--d-next)" stroke="var(--d-edge)" stroke-width="2"/>
+          <text x="600" y="40" text-anchor="middle" font-size="12" fill="var(--d-soft)">Next</text>
+          <text x="600" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="var(--d-ink)">Browser version</text>
+
+          <a class="pill" href="https://github.com/jaymoran103/happycamper-public">
+            <title>View in GitHub</title>
+            <rect x="160" y="112" width="170" height="30" rx="15" fill="#e3f0df" stroke="#7fa77f"/>
+            <text class="lbl" fill="#26302a" x="245" y="132" text-anchor="middle" font-size="11">happycamper-public &#8226; v2.2</text>
+            <text class="hov" fill="#26302a" display="none" x="245" y="132" text-anchor="middle" font-size="11">View in GitHub &#8599;</text>
+          </a>
+          <a class="pill" href="https://github.com/jaymoran103/happycamper-heart">
+            <title>View in GitHub</title>
+            <rect x="345" y="112" width="170" height="30" rx="15" fill="#e3f0df" stroke="#7fa77f"/>
+            <text class="lbl" fill="#26302a" x="430" y="132" text-anchor="middle" font-size="11">happycamper-heart &#8226; v2.5</text>
+            <text class="hov" fill="#26302a" display="none" x="430" y="132" text-anchor="middle" font-size="11">View in GitHub &#8599;</text>
+          </a>
+        </svg>
+      </div>
+      <p class="era"><b>2024.</b> After watching team members catch known schedule errors by hand, I wrote a simple script to cross-check camp rosters, turning a tedious manual process into a reliable utility.</p>
+      <p class="era"><b>2025.</b> I rebuilt the script as a more user-friendly Java app. Once the concept was proven and data anonymized, I introduced agentic coding tools to improve test coverage and perform efficient revisions before the summer season. HappyCamper v2.2 debuted to rave reviews, saving precious hours each week.</p>
+      <p class="era"><b>2026.</b> Versions 2.3 to 2.5 deployed throughout summer months to deliver user-requested features: pass/fail checks, sorting by demand, advanced preference analysis, and configurable views for custom workflows.</p>
+      <p class="era"><b>Next.</b> HappyCamper is designed to be future proof and need little modification going forward. This version will work reliably until input schemas change for the upstream apps. When details change, any developer with Java experience can make these changes quickly; the internal logic is intuitive and well documented.</p>
+      <p>Camper data has never touched a public codebase or agentic tool. Every roster used for testing and demos was written by hand or anonymized with <a href="https://github.com/jaymoran103/NameSwap">NameSwap</a>, a Python tool I created for this purpose.</p>
+    </section>
+  </main>
+
+  <footer class="sitefoot">
+    <div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a> &middot; Hit up <a href="mailto:jaymorandev@gmail.com">jaymorandev@gmail.com</a> for more info!</div>
+    <div>
+      <a href="https://github.com/jaymoran103/happycamper-heart">Source &amp; documentation</a> &middot;
+      <a href="https://github.com/jaymoran103/happycamper-heart/releases">All releases</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
