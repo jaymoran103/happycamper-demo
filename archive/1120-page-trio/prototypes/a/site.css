@@ -1,0 +1,27 @@
+/* Shared by all three pages: switcher, header, overview, footer. */
+:root {
+  --accent: #1a672c; --accent-dark: #2f7340; --ink: #26302a; --soft: #43524a;
+  --paper: #cfe3c9; --card: #fff; --line: #b9d3b5;
+}
+html { background: var(--paper); }
+
+.pairbar { width: min(1120px, 100%); margin: 0 auto; padding-top: 1rem; display: flex; justify-content: flex-end; }
+nav.pair { display: flex; flex-wrap: wrap; gap: .35rem; font: 700 .8rem Verdana, Geneva, sans-serif; }
+nav.pair a, nav.pair span { padding: .28rem .8rem; border-radius: 999px; border: 1px solid rgba(47,115,64,.35); text-decoration: none; }
+nav.pair a { color: var(--accent-dark); background: rgba(255,255,255,.55); }
+nav.pair a:hover { background: #fff; }
+nav.pair span { color: #fff; background: var(--accent); border-color: var(--accent); }
+
+.sitehead { text-align: center; margin-top: 1.5rem; }
+.sitehead img { width: 110px; height: 110px; }
+.sitehead h1 { font-size: 2.4rem; line-height: 1.2; margin: 1rem 0 0; }
+
+.overview { text-align: left; margin-top: 1.5rem; }
+.overview .headline { margin: 0 0 .75rem; font-size: 1.2rem; line-height: 1.4; font-weight: 700; color: var(--accent); }
+.overview p { margin: 0 0 1rem; }
+
+footer.sitefoot { margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .85rem; color: var(--soft); }
+footer.sitefoot a { color: inherit; }
+footer.sitefoot div + div { margin-top: .4rem; }
+
+@media (max-width: 820px) { .sitehead h1 { font-size: 2rem; } }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HappyCamper Codebase</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="site.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0 1.25rem 3rem; background: var(--paper); color: var(--ink); font: 16px/1.6 Verdana, Geneva, sans-serif; }
+  a { color: var(--accent-dark); }
+  :focus-visible { outline: 3px solid #2b68b8; outline-offset: 2px; }
+  .page { width: min(44rem, 100%); margin: 0 auto; }
+  section { margin-top: 2.5rem; }
+  h2 { font-size: 1.3rem; line-height: 1.3; margin: 0 0 .5rem; }
+  section p { margin: 0 0 .9rem; }
+  .repos { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .repo { padding: 1rem 1.2rem; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  .repo h3 { margin: 0; font-size: 1rem; }
+  .repo .ver { margin: .15rem 0 .5rem; font-size: .82rem; font-weight: 700; color: var(--accent-dark); }
+  .repo p { margin: 0; font-size: .9rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="pairbar"><nav class="pair" aria-label="HappyCamper pages"><a href="index.html">Download</a><a href="demo.html">Demo</a><span aria-current="page">Codebase</span></nav></div>
+<div class="page">
+  <header class="sitehead">
+    <img src="icon.png" alt="HappyCamper logo">
+    <h1>HappyCamper</h1>
+  </header>
+
+  <main>
+    <div class="overview">
+      <h2 class="headline">How it's built</h2>
+      <p>What the app is made of, where its code lives, and what it does with your data.</p>
+    </div>
+
+    <section>
+      <h2>What it does</h2>
+      <p>HappyCamper takes two spreadsheets saved as CSV files, your camper list and your activity schedule. It merges them into one table and gives you filters for finding errors in it.</p>
+      <p>If you'd rather work in your own spreadsheet tool, export the merged table as a CSV and take it from there.</p>
+    </section>
+
+    <section>
+      <h2>Your data stays on your computer</h2>
+      <p>A website sends what you enter to someone else's server. HappyCamper is a desktop app, so it runs entirely on your computer.</p>
+      <p>It never connects to the internet. Data only goes in when you import a file, and only comes out when you export one. Nothing is kept between runs.</p>
+    </section>
+
+    <section>
+      <h2>Nothing else to install</h2>
+      <p>HappyCamper is written in Java, and each download includes everything it needs to run. It works the same on Mac, Windows and Linux.</p>
+    </section>
+
+    <section>
+      <h2>Where the code lives</h2>
+      <p>The code is public on GitHub, a site that stores code along with the history of every change. Anyone can read it without an account.</p>
+      <div class="repos">
+        <div class="repo">
+          <h3><a href="https://github.com/jaymoran103/happycamper-public">happycamper-public</a></h3>
+          <p class="ver">Version 2.2</p>
+          <p>The version camps used in 2025.</p>
+        </div>
+        <div class="repo">
+          <h3><a href="https://github.com/jaymoran103/happycamper-heart">happycamper-heart</a></h3>
+          <p class="ver">Versions 2.3 to 2.5</p>
+          <p>The 2026 distribution. Each version added features users asked for over the summer. The downloads on this site come from here.</p>
+        </div>
+      </div>
+      <p>Both are tested, reviewed, and usable today.</p>
+    </section>
+
+    <section>
+      <h2>How it was written</h2>
+      <p>I wrote the original version by hand in 2024 and 2025. Since then I've used AI coding tools to improve test coverage and reorganize the code.</p>
+      <p>No AI system has seen real camper data. Every roster in the codebase was written by hand, or anonymized with <a href="https://github.com/jaymoran103/NameSwap">NameSwap</a> before it was added.</p>
+    </section>
+  </main>
+
+  <footer class="sitefoot">
+    <div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a> &middot; Hit up <a href="mailto:jaymorandev@gmail.com">jaymorandev@gmail.com</a> for more info!</div>
+    <div>
+      <a href="https://github.com/jaymoran103/happycamper-heart">Source &amp; documentation</a> &middot;
+      <a href="https://github.com/jaymoran103/happycamper-heart/releases">All releases</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
