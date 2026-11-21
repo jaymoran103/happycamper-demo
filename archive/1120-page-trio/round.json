@@ -1,0 +1,179 @@
+{
+  "round": "1120-page-trio",
+  "title": "HappyCamper page trio",
+  "surface": "site/: download, demo and codebase pages",
+  "question": "How do three plain pages give someone who isn't a developer the download, a feel for the app, and enough about its code to trust it?",
+  "rules": "docs/site-ui-rules.md",
+  "stylesheet": "shell.css",
+  "script": "shell.js",
+  "settled": [
+    "The download page is the hub. There is no separate landing page.",
+    "Every page uses the green background, a centered logo and title, and a left-aligned overview.",
+    "The demo page keeps phase 2's content. Only its section layout changes.",
+    "The codebase page keeps A's depth: short sections, plain words, no selling.",
+    "Privacy is framed by what the app does, not by what websites do.",
+    "The history reads as a script (2024), an app (2025), an analysis platform (2026), and a serverless browser version next.",
+    "Rosters were written or anonymized before the project touched a public repository or an AI tool.",
+    "One diagram shows the CSVs as tables beside HappyCamper on Java, inside your computer. The use flow comes before it and the comparison with websites after.",
+    "How I built it is one sequence joining the timeline and the two repositories.",
+    "The history is B's timeline, titled History, with each repo as a pill reading name and version, linking to GitHub.",
+    "The codebase page has four sections: Built on spreadsheets, Secure and open source, Free and future-proof, and History.",
+    "The diagram uses icons, with labels only for the camper roster, activity roster, merged roster and your device.",
+    "History keeps B's per-year text under the timeline. The heart pill shows only the newest version, v2.5.",
+    "The diagram reads as three columns: the app, the data files, and the internet. Your device and the internet are matching boxes, each labelled by its own icon in the corner.",
+    "The three CSVs stack together. The flow is one way: camp app → both rosters → HappyCamper → merged roster → a cluster of spreadsheet apps.",
+    "The third page is called Details, headed How HappyCamper Works."
+  ],
+  "open": [
+    "The install steps for each OS haven't been checked against a real install.",
+    "site.css is a new shared file. tools/site/make-site.py doesn't produce it yet.",
+    "Which fixed header bar style to use on every page.",
+    "Whether clicking the logo and name goes to the download page."
+  ],
+  "iterations": [
+    {
+      "id": "A",
+      "file": "prototypes/a/index.html",
+      "name": "First trio",
+      "tried": "Download as the hub with one OS picker and collapsible install steps, the demo with one fixed-height section layout, and a short codebase page, sharing one header.",
+      "verdict": "superseded",
+      "why": "Download and demo pages hold. The codebase page led with what websites do, and its AI section read as defensive.",
+      "contributed": [
+        "the download page",
+        "the demo page",
+        "the codebase page's depth"
+      ],
+      "followed_by": [
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "id": "B",
+      "file": "prototypes/b/codebase.html",
+      "name": "Codebase: compare",
+      "tried": "Overview with three fact pills, a file-flow diagram, a three-column table (website, web demo, app), and a horizontal timeline with repo bands. Download and demo stay as A.",
+      "verdict": "superseded",
+      "why": "Its timeline and repo cards carry into one build sequence.",
+      "contributed": [
+        "the timeline",
+        "the repo cards"
+      ],
+      "followed_by": [
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C",
+      "file": "prototypes/c/codebase.html",
+      "name": "Codebase: your computer",
+      "tried": "Logo beside the name and a ruled lede, a merging-spreadsheets diagram, a 'your computer' stack with the internet cut off, and a vertical timeline with a data-first pin. Download and demo stay as A.",
+      "verdict": "superseded",
+      "why": "Its two diagrams were the favorites, and merge into one.",
+      "contributed": [
+        "spreadsheets drawn as tables",
+        "the 'your computer' container with Java under the app"
+      ],
+      "followed_by": [
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "D",
+      "file": "prototypes/d/codebase.html",
+      "name": "Codebase: lanes",
+      "tried": "Smaller logo and a contents card, three numbered steps, a layer stack and one-session diagram, and three lanes showing data anonymized before AI tools began. Download and demo stay as A.",
+      "verdict": "superseded",
+      "why": "B and C were preferred.",
+      "contributed": [],
+      "followed_by": []
+    },
+    {
+      "id": "E",
+      "file": "prototypes/e/codebase.html",
+      "name": "Merged: light bar",
+      "tried": "C's diagrams merged into one, without the internet sidecar, plus B's timeline and repos as one sequence. Light header bar with underlined routes. Fixed header bar with the logo and name left and the three routes right; the logo goes to the download page. Download and demo stay as A.",
+      "verdict": "superseded",
+      "why": "Said too much and showed too little. Its build sequence regressed from B's timeline.",
+      "contributed": [
+        "the merged 'your computer' diagram",
+        "the wording after the diagram",
+        "the light header bar"
+      ],
+      "followed_by": [
+        "G"
+      ]
+    },
+    {
+      "id": "F",
+      "file": "prototypes/f/codebase.html",
+      "name": "Merged: green bar, sidecar",
+      "tried": "E's page with the CSVs moving to and from wherever rosters live, outside your computer. Solid green header bar with pill routes. Fixed header bar with the logo and name left and the three routes right; the logo goes to the download page. Download and demo stay as A.",
+      "verdict": "superseded",
+      "why": "Said too much and showed too little. The sidecar idea held.",
+      "contributed": [
+        "CSVs moving to and from outside your computer"
+      ],
+      "followed_by": [
+        "G"
+      ]
+    },
+    {
+      "id": "G",
+      "file": "prototypes/g/codebase.html",
+      "name": "Icons",
+      "tried": "F's diagram retold in icons: a camp app as the source, CSV files drawn as file and table, HappyCamper's icon by its name, Java's cup, and Sheets and Excel as destinations. B's timeline returns as History, with repo pills that read 'View in GitHub' on hover. E's light header bar.",
+      "verdict": "superseded",
+      "why": "The icons held, but the diagram needs a few labels and the text was long-winded.",
+      "contributed": [
+        "the icon diagram",
+        "the timeline with GitHub pills"
+      ],
+      "followed_by": [
+        "H"
+      ]
+    },
+    {
+      "id": "H",
+      "file": "prototypes/h/codebase.html",
+      "name": "Labels and short sections",
+      "tried": "G's icon diagram with four labels: camper roster, activity roster, merged roster, your device. Three short sections replace the long paragraphs. History restores B's per-year text, and the heart pill reads v2.5.",
+      "verdict": "superseded",
+      "why": "The labels and short sections held. The outside apps belong in their own column, and the history needed new text.",
+      "contributed": [
+        "the four diagram labels",
+        "the three short sections"
+      ],
+      "followed_by": [
+        "I"
+      ]
+    },
+    {
+      "id": "I",
+      "file": "prototypes/i/codebase.html",
+      "name": "Three columns",
+      "tried": "The diagram as three columns: HappyCamper on Java, the three CSVs stacked, and the camp app, Sheets and Excel stacked in an Internet box that mirrors Your device. Your history text. F's green bar, with the logo straight on the green.",
+      "verdict": "superseded",
+      "why": "Held. J only adjusts the history's closing text.",
+      "contributed": [
+        "everything but the history's end"
+      ],
+      "followed_by": [
+        "J"
+      ]
+    },
+    {
+      "id": "J",
+      "file": "prototypes/j/codebase.html",
+      "name": "Data Note",
+      "tried": "I with one-way diagonal arrows, larger heads, a smaller HappyCamper table, and Sheets, Excel and Numbers clustered as one destination. History ends with Future Summers and a Data Note bubble, darker than the page. The footer is one credit line and the Download and Demo pills from the header. The page is renamed Details, headed How HappyCamper Works. The diagram gains a caption, more space before the merged roster, and five same-size destination tiles in two staggered rows: Sheets, Excel, Numbers, a text editor and a dashed wild card.",
+      "verdict": "parked",
+      "why": "Not reviewed yet.",
+      "contributed": [],
+      "followed_by": []
+    }
+  ]
+}

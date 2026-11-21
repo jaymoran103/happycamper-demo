@@ -1,0 +1,109 @@
+{
+  "notes": [
+    {
+      "iteration": "A",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-20T22:46:51.180Z",
+      "text": "Great start, nails the depth. Leading with what websites do makes privacy look scarier than it is, and 'how it was written' feels defensive and AI focused. Try diagrams: pros and cons, stack diagrams, a three-column website / web demo / Java app comparison."
+    },
+    {
+      "iteration": "B",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-20T23:25:02.657Z",
+      "text": "B and C both have great aspects. Combine B's timeline and 'where the code lives' into a simple sequence."
+    },
+    {
+      "iteration": "C",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-20T23:25:02.675Z",
+      "text": "C has my two favorite diagrams, which can collapse into one: HappyCamper on top of Java inside 'your computer', with the input and output CSVs drawn as tables beside it."
+    },
+    {
+      "iteration": "E",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T00:15:52.535Z",
+      "text": "Both E and F say too much and show too little. The E/F timelines are regressions: I wanted B's original timeline, with repo pills as GitHub links and no descriptions."
+    },
+    {
+      "iteration": "F",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T00:15:52.553Z",
+      "text": "Extend F's diagram with familiar icons over text: a camp app as the download source, Sheets as the upload destination, Java, and CSVs that read as both a file and a table."
+    },
+    {
+      "iteration": "G",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T01:05:23.689Z",
+      "text": "Good start. Use a bit more text to say what's what: camper roster, activity roster, merged roster, and 'your device'. The paragraphs are long-winded; try simpler headings and sections. Restore the timeline descriptions to the text from B, and the heart pill should just say 2.5."
+    },
+    {
+      "iteration": "H",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T01:44:40.287Z",
+      "text": "Put the external apps right of 'your device': three implicit columns, the app, the data files, the internet, with files and apps each stacked. Only merged roster to HappyCamper goes both ways. A web icon for the Internet box, displayed like the computer icon and not tied to one element. New history text. Use F's header bar with the logo on the same green."
+    },
+    {
+      "iteration": "I",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T01:49:36.724Z",
+      "text": "One final change: give the data disclaimer its own bubble starting 'Data Note:', say 'This Java distribution will work reliably until...', and add two short sentences on a lighter browser version, with the caveat that I'm a solo developer without much time."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:11:08.205Z",
+      "text": "Horizontal arrows are confusing, and Sheets pointing into the activity roster is wrong. One-way flow from the camp app to both rosters, to HappyCamper, to the merged roster, to a slightly overlapping cluster of three spreadsheet apps. Smaller HappyCamper table, 6x4. Next becomes Future Summers. Data Note darker than the page, with NameSwap as a GitHub pill."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:12:12.838Z",
+      "text": "Footer: 'A free app created by Jay Moran · reach out to jaymorandev@gmail.com for more info!', and the Download and Demo pills from the top in place of 'Source & documentation'. The NameSwap pill was a bad idea; switch it back."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:14:05.561Z",
+      "text": "Drop All releases, just the two pills. Drop 'reach out to [email]' from the footer since it's repeated above, and above say 'reach out to jaymorandev@gmail.com.'"
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:17:26.864Z",
+      "text": "Data note says 'Real camper data has...'. Call this page Details instead of Codebase, with the header 'How HappyCamper Works'."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:17:34.875Z",
+      "text": "Lose the line under the heading."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:21:24.178Z",
+      "text": "Add a description to the diagram and more space before the merged roster. The spreadsheet icons mush together: give each a square tile like the camp app, all four the same size, with vertical differentiation and some overlap."
+    },
+    {
+      "iteration": "J",
+      "by": "Jay",
+      "kind": "human",
+      "at": "2026-11-21T02:24:06.257Z",
+      "text": "Caption: '...merges them on your device, with additional review features and easy export so you can manipulate them in any spreadsheet app or text editor'. Add a generic text editor icon and a fifth wild card app to round out the external apps."
+    }
+  ]
+}
