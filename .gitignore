@@ -6,3 +6,4 @@ tools/demo-build/shots/
 # Pausing tracking until output proves itself
 AGENTS.md
 docs/1120-happycamper-html-demo.md
+.playwright-mcp/
