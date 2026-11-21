@@ -1,7 +1,7 @@
 {
   "round": "1120-page-trio",
   "title": "HappyCamper page trio",
-  "surface": "site/: download, demo and codebase pages",
+  "surface": "site/: download, demo and details pages",
   "question": "How do three plain pages give someone who isn't a developer the download, a feel for the app, and enough about its code to trust it?",
   "rules": "docs/site-ui-rules.md",
   "stylesheet": "shell.css",
@@ -22,13 +22,11 @@
     "History keeps B's per-year text under the timeline. The heart pill shows only the newest version, v2.5.",
     "The diagram reads as three columns: the app, the data files, and the internet. Your device and the internet are matching boxes, each labelled by its own icon in the corner.",
     "The three CSVs stack together. The flow is one way: camp app → both rosters → HappyCamper → merged roster → a cluster of spreadsheet apps.",
-    "The third page is called Details, headed How HappyCamper Works."
+    "The third page is called Details, headed How HappyCamper Works.",
+    "Every page uses J's green header bar, nav boxes to the other two pages at the bottom, and a footer with only the credit."
   ],
   "open": [
-    "The install steps for each OS haven't been checked against a real install.",
-    "site.css is a new shared file. tools/site/make-site.py doesn't produce it yet.",
-    "Which fixed header bar style to use on every page.",
-    "Whether clicking the logo and name goes to the download page."
+    "The install steps for each OS haven't been checked against a real install."
   ],
   "iterations": [
     {
@@ -170,8 +168,22 @@
       "file": "prototypes/j/codebase.html",
       "name": "Data Note",
       "tried": "I with one-way diagonal arrows, larger heads, a smaller HappyCamper table, and Sheets, Excel and Numbers clustered as one destination. History ends with Future Summers and a Data Note bubble, darker than the page. The footer is one credit line and the Download and Demo pills from the header. The page is renamed Details, headed How HappyCamper Works. The diagram gains a caption, more space before the merged roster, and five same-size destination tiles in two staggered rows: Sheets, Excel, Numbers, a text editor and a dashed wild card.",
-      "verdict": "parked",
-      "why": "Not reviewed yet.",
+      "verdict": "superseded",
+      "why": "Held. K adds the shared nav boxes and names the page Details throughout.",
+      "contributed": [
+        "the whole page"
+      ],
+      "followed_by": [
+        "K"
+      ]
+    },
+    {
+      "id": "K",
+      "file": "prototypes/k/details.html",
+      "name": "Details, nav boxes",
+      "tried": "J as details.html, with the shared header bar, and nav boxes for Download the Java app and the In-browser demo in place of the footer pills.",
+      "verdict": "confirmed",
+      "why": "Shipped as site/details.html.",
       "contributed": [],
       "followed_by": []
     }

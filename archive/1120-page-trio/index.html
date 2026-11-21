@@ -26,7 +26,8 @@
     <a href="prototypes/g/codebase.html" title="Icons — superseded" class="nav-muted">G</a>
     <a href="prototypes/h/codebase.html" title="Labels and short sections — superseded" class="nav-muted">H</a>
     <a href="prototypes/i/codebase.html" title="Three columns — superseded" class="nav-muted">I</a>
-    <a href="prototypes/j/codebase.html" title="Data Note — parked" class="nav-warn">J</a>
+    <a href="prototypes/j/codebase.html" title="Data Note — superseded" class="nav-muted">J</a>
+    <a href="prototypes/k/details.html" title="Details, nav boxes — confirmed" class="nav-ok">K</a>
   </nav>
 </div>
 
@@ -43,12 +44,12 @@
 
 <h1>HappyCamper page trio</h1>
 
-<p class="note">Surface: <code>site/: download, demo and codebase pages</code> · Rules: <code>docs/site-ui-rules.md</code></p>
+<p class="note">Surface: <code>site/: download, demo and details pages</code> · Rules: <code>docs/site-ui-rules.md</code></p>
 
 <h2>Lineage</h2>
 <div class="lineage">
-  <svg viewBox="0 0 1292 174" width="1292" height="174" role="img"
-       aria-label="Iteration lineage: A superseded, B superseded, C superseded, D superseded, E superseded, F superseded, G superseded, H superseded, I superseded, J parked">
+  <svg viewBox="0 0 1482 174" width="1482" height="174" role="img"
+       aria-label="Iteration lineage: A superseded, B superseded, C superseded, D superseded, E superseded, F superseded, G superseded, H superseded, I superseded, J superseded, K confirmed">
     <defs>
       <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
         <path d="M0 0 L8 4 L0 8 z" fill="hsl(var(--border))"/>
@@ -66,6 +67,7 @@
       <path d="M712 31 C741 31 741 31 770 31" fill="none" stroke="hsl(var(--border))" stroke-width="1.5" marker-end="url(#arrow)"/>
       <path d="M902 31 C931 31 931 31 960 31" fill="none" stroke="hsl(var(--border))" stroke-width="1.5" marker-end="url(#arrow)"/>
       <path d="M1092 31 C1121 31 1121 31 1150 31" fill="none" stroke="hsl(var(--border))" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <path d="M1282 31 C1311 31 1311 31 1340 31" fill="none" stroke="hsl(var(--border))" stroke-width="1.5" marker-end="url(#arrow)"/>
       <a href="prototypes/a/index.html" class="lin-node lin-muted">
         <rect x="10" y="10" width="132" height="42" rx="6"/>
         <text x="19" y="27" class="lin-id">A · First trio</text>
@@ -111,18 +113,23 @@
         <text x="969" y="27" class="lin-id">I · Three columns</text>
         <text x="969" y="42" class="lin-verdict">superseded</text>
       </a>
-      <a href="prototypes/j/codebase.html" class="lin-node lin-warn">
+      <a href="prototypes/j/codebase.html" class="lin-node lin-muted">
         <rect x="1150" y="10" width="132" height="42" rx="6"/>
         <text x="1159" y="27" class="lin-id">J · Data Note</text>
-        <text x="1159" y="42" class="lin-verdict">parked</text>
+        <text x="1159" y="42" class="lin-verdict">superseded</text>
+      </a>
+      <a href="prototypes/k/details.html" class="lin-node lin-ok">
+        <rect x="1340" y="10" width="132" height="42" rx="6"/>
+        <text x="1349" y="27" class="lin-id">K · Details, nav boxes</text>
+        <text x="1349" y="42" class="lin-verdict">confirmed</text>
       </a>
   </svg>
 </div>
 <h2>Settled</h2>
-<ul><li>The download page is the hub. There is no separate landing page.</li><li>Every page uses the green background, a centered logo and title, and a left-aligned overview.</li><li>The demo page keeps phase 2's content. Only its section layout changes.</li><li>The codebase page keeps A's depth: short sections, plain words, no selling.</li><li>Privacy is framed by what the app does, not by what websites do.</li><li>The history reads as a script (2024), an app (2025), an analysis platform (2026), and a serverless browser version next.</li><li>Rosters were written or anonymized before the project touched a public repository or an AI tool.</li><li>One diagram shows the CSVs as tables beside HappyCamper on Java, inside your computer. The use flow comes before it and the comparison with websites after.</li><li>How I built it is one sequence joining the timeline and the two repositories.</li><li>The history is B's timeline, titled History, with each repo as a pill reading name and version, linking to GitHub.</li><li>The codebase page has four sections: Built on spreadsheets, Secure and open source, Free and future-proof, and History.</li><li>The diagram uses icons, with labels only for the camper roster, activity roster, merged roster and your device.</li><li>History keeps B's per-year text under the timeline. The heart pill shows only the newest version, v2.5.</li><li>The diagram reads as three columns: the app, the data files, and the internet. Your device and the internet are matching boxes, each labelled by its own icon in the corner.</li><li>The three CSVs stack together. The flow is one way: camp app → both rosters → HappyCamper → merged roster → a cluster of spreadsheet apps.</li><li>The third page is called Details, headed How HappyCamper Works.</li></ul>
+<ul><li>The download page is the hub. There is no separate landing page.</li><li>Every page uses the green background, a centered logo and title, and a left-aligned overview.</li><li>The demo page keeps phase 2's content. Only its section layout changes.</li><li>The codebase page keeps A's depth: short sections, plain words, no selling.</li><li>Privacy is framed by what the app does, not by what websites do.</li><li>The history reads as a script (2024), an app (2025), an analysis platform (2026), and a serverless browser version next.</li><li>Rosters were written or anonymized before the project touched a public repository or an AI tool.</li><li>One diagram shows the CSVs as tables beside HappyCamper on Java, inside your computer. The use flow comes before it and the comparison with websites after.</li><li>How I built it is one sequence joining the timeline and the two repositories.</li><li>The history is B's timeline, titled History, with each repo as a pill reading name and version, linking to GitHub.</li><li>The codebase page has four sections: Built on spreadsheets, Secure and open source, Free and future-proof, and History.</li><li>The diagram uses icons, with labels only for the camper roster, activity roster, merged roster and your device.</li><li>History keeps B's per-year text under the timeline. The heart pill shows only the newest version, v2.5.</li><li>The diagram reads as three columns: the app, the data files, and the internet. Your device and the internet are matching boxes, each labelled by its own icon in the corner.</li><li>The three CSVs stack together. The flow is one way: camp app → both rosters → HappyCamper → merged roster → a cluster of spreadsheet apps.</li><li>The third page is called Details, headed How HappyCamper Works.</li><li>Every page uses J's green header bar, nav boxes to the other two pages at the bottom, and a footer with only the credit.</li></ul>
 
 <h2>Still open</h2>
-<ul><li>The install steps for each OS haven't been checked against a real install.</li><li>site.css is a new shared file. tools/site/make-site.py doesn't produce it yet.</li><li>Which fixed header bar style to use on every page.</li><li>Whether clicking the logo and name goes to the download page.</li></ul>
+<ul><li>The install steps for each OS haven't been checked against a real install.</li></ul>
 
 <h2>The iterations</h2>
 <div class="varlist">
@@ -181,10 +188,16 @@
     <p class="why">Held. J only adjusts the history's closing text.</p>
 <p class="rels"><span class="rel">directly followed by <a href="prototypes/j/codebase.html">J</a></span><span class="rel ok">kept everything but the history's end</span></p>  </div>
   <div class="varcard" id="card-J">
-    <h3><a href="prototypes/j/codebase.html">J · Data Note</a> <span class="pill warn">parked</span></h3>
+    <h3><a href="prototypes/j/codebase.html">J · Data Note</a> <span class="pill muted">superseded</span></h3>
     <div class="notes"><div class="note-human"><b>Jay</b> · Nov 20 · Horizontal arrows are confusing, and Sheets pointing into the activity roster is wrong. One-way flow from the camp app to both rosters, to HappyCamper, to the merged roster, to a slightly overlapping cluster of three spreadsheet apps. Smaller HappyCamper table, 6x4. Next becomes Future Summers. Data Note darker than the page, with NameSwap as a GitHub pill.</div><div class="note-human"><b>Jay</b> · Nov 20 · Footer: 'A free app created by Jay Moran · reach out to jaymorandev@gmail.com for more info!', and the Download and Demo pills from the top in place of 'Source &amp; documentation'. The NameSwap pill was a bad idea; switch it back.</div><div class="note-human"><b>Jay</b> · Nov 20 · Drop All releases, just the two pills. Drop 'reach out to [email]' from the footer since it's repeated above, and above say 'reach out to jaymorandev@gmail.com.'</div><div class="note-human"><b>Jay</b> · Nov 20 · Data note says 'Real camper data has...'. Call this page Details instead of Codebase, with the header 'How HappyCamper Works'.</div><div class="note-human"><b>Jay</b> · Nov 20 · Lose the line under the heading.</div><div class="note-human"><b>Jay</b> · Nov 20 · Add a description to the diagram and more space before the merged roster. The spreadsheet icons mush together: give each a square tile like the camp app, all four the same size, with vertical differentiation and some overlap.</div><div class="note-human"><b>Jay</b> · Nov 20 · Caption: '...merges them on your device, with additional review features and easy export so you can manipulate them in any spreadsheet app or text editor'. Add a generic text editor icon and a fifth wild card app to round out the external apps.</div></div>
     <p class="tag">I with one-way diagonal arrows, larger heads, a smaller HappyCamper table, and Sheets, Excel and Numbers clustered as one destination. History ends with Future Summers and a Data Note bubble, darker than the page. The footer is one credit line and the Download and Demo pills from the header. The page is renamed Details, headed How HappyCamper Works. The diagram gains a caption, more space before the merged roster, and five same-size destination tiles in two staggered rows: Sheets, Excel, Numbers, a text editor and a dashed wild card.</p>
-    <p class="why">Not reviewed yet.</p>
+    <p class="why">Held. K adds the shared nav boxes and names the page Details throughout.</p>
+<p class="rels"><span class="rel">directly followed by <a href="prototypes/k/details.html">K</a></span><span class="rel ok">kept the whole page</span></p>  </div>
+  <div class="varcard" id="card-K">
+    <h3><a href="prototypes/k/details.html">K · Details, nav boxes</a> <span class="pill ok">confirmed</span></h3>
+    
+    <p class="tag">J as details.html, with the shared header bar, and nav boxes for Download the Java app and the In-browser demo in place of the footer pills.</p>
+    <p class="why">Shipped as site/details.html.</p>
   </div>
 </div>
 

@@ -4,8 +4,8 @@
 
 ## Before publishing
 
-1. If the demo build changed, run `python3 -I tools/site/make-site.py` from the repo root. It rewrites both pages, so make lasting changes in `make-site.py` rather than in `site/*.html`.
-2. Open `site/index.html` and check that Download and Demo switch between the pages.
+1. If the demo build changed, run `python3 -I tools/site/make-site.py` from the repo root. It rewrites all three pages, so make lasting changes in `make-site.py` rather than in `site/*.html`.
+2. Open `site/index.html` and check that Download, Demo and Details switch between the pages.
 3. Commit and push to `main`.
 
 ## Serve from this repo with GitHub Pages
