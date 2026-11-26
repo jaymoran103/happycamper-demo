@@ -49,9 +49,9 @@ ICON = {
 BOX = {
     'download': ('', 'down', 'Download the Java app', 'Bundled distributions and sample data'),
     'demo': ('demo', 'globe', 'In-browser demo', "The quickest look at HappyCamper's core features."),
-    'details': ('', 'shield', 'Details', 'How the app is built, and how data is used.'),
+    'details': ('', 'shield', 'About', 'How the app is built, and how data is used.'),
 }
-PAGES = [('Download', 'download'), ('Demo', 'demo'), ('Details', 'details')]
+PAGES = [('Download', 'download'), ('Demo', 'demo'), ('About', 'details')]
 
 def bar(here, href, icon='icon.png'):
     items = ''.join('<span aria-current="page">%s</span>' % n if n == here else '<a href="%s">%s</a>' % (href[k], n) for n, k in PAGES)

@@ -153,7 +153,7 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
     <nav class="signs" aria-label="Try HappyCamper">
       <a class="ros" id="toRosters" href="#"></a>
       <a class="demo" id="toDemo" href="#"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><div><b>In-browser demo</b><span>The quickest look at HappyCamper's core features.</span></div></a>
-      <a id="toDetails" href="#"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><div><b>Details</b><span>How the app is built, and how data is used.</span></div></a>
+      <a id="toDetails" href="#"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><div><b>About</b><span>How the app is built, and how data is used.</span></div></a>
     </nav>
   </main>
   <footer data-foot></footer>
@@ -360,13 +360,13 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
     if (head) {
       head.className = "bar";
       head.innerHTML = '<div class="in"><a class="home" href="index.html" aria-label="HappyCamper, download page"><img src="' + DL.icon + '" alt=""><span>HappyCamper</span></a>' +
-        '<nav aria-label="HappyCamper pages"><span aria-current="page">Download</span><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">Details</a></nav></div>';
+        '<nav aria-label="HappyCamper pages"><span aria-current="page">Download</span><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">About</a></nav></div>';
     }
     var foot = document.querySelector("footer[data-foot]");
     if (foot) {
       foot.className = "sitefoot";
       foot.innerHTML = '<div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a></div>' +
-        '<div><nav class="footpills" aria-label="HappyCamper pages"><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">Details</a></nav></div>';
+        '<div><nav class="footpills" aria-label="HappyCamper pages"><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">About</a></nav></div>';
     }
 
     fetch("https://api.github.com/repos/jaymoran103/happycamper-heart/releases/latest")

@@ -161,13 +161,13 @@
     if (head) {
       head.className = "bar";
       head.innerHTML = '<div class="in"><a class="home" href="index.html" aria-label="HappyCamper, download page"><img src="' + DL.icon + '" alt=""><span>HappyCamper</span></a>' +
-        '<nav aria-label="HappyCamper pages"><span aria-current="page">Download</span><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">Details</a></nav></div>';
+        '<nav aria-label="HappyCamper pages"><span aria-current="page">Download</span><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">About</a></nav></div>';
     }
     var foot = document.querySelector("footer[data-foot]");
     if (foot) {
       foot.className = "sitefoot";
       foot.innerHTML = '<div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a></div>' +
-        '<div><nav class="footpills" aria-label="HappyCamper pages"><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">Details</a></nav></div>';
+        '<div><nav class="footpills" aria-label="HappyCamper pages"><a href="' + DL.links.demo + '">Demo</a><a href="' + DL.links.details + '">About</a></nav></div>';
     }
 
     fetch("https://api.github.com/repos/jaymoran103/happycamper-heart/releases/latest")
