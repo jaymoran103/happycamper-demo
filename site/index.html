@@ -105,7 +105,7 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
 <style>
   .acc { display: flex; gap: .5rem; margin: 1.8rem auto 0; max-width: 36rem; }
   .acc .mod { flex: 1; min-width: 0; padding: .7rem .3rem; cursor: pointer; transition: flex .3s ease, padding .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
-  .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; border-color: var(--accent); }
+  .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; }
   .acc .mod .more, .acc .mod .full, .acc .mod.open .short { display: none; }
   .acc .mod.open .more { display: contents; }
   .acc .mod.open .badge { display: block; }
@@ -133,9 +133,8 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
   .signs span { font-size: .8rem; color: var(--soft); }
   @media (max-width: 600px) { .signs { grid-template-columns: 1fr; } }
 
-  .acc .mod.open { background: #f4f9f2; border: 2.5px solid var(--accent); }
-  .acc .mod.mine.open { box-shadow: 0 0 0 5px rgba(26,103,44,.2); }
-  .acc .mod.mine:not(.open) { border: 2px dashed var(--accent); }
+  .acc .mod.open { background: #f4f9f2; }
+  .acc .mod.mine { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 0 6px rgba(26,103,44,.2); }
   .acc .mod .badge { font-size: .66rem; padding: .05rem .6rem; }
   .signs { grid-template-columns: repeat(3, 1fr); }
   .signs a.ros .csv { flex: none; width: 26px; height: 31px; }
