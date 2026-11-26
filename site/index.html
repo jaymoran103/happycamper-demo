@@ -104,7 +104,7 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
 </style>
 <style>
   .acc { display: flex; gap: .5rem; margin: 1.8rem auto 0; max-width: 36rem; }
-  .acc .mod { flex: 1; min-width: 0; padding: .7rem .3rem; cursor: pointer; transition: flex .2s ease; }
+  .acc .mod { flex: 1; min-width: 0; padding: .7rem .3rem; cursor: pointer; transition: flex .3s ease, padding .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
   .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; border-color: var(--accent); }
   .acc .mod .more, .acc .mod .full, .acc .mod.open .short { display: none; }
   .acc .mod.open .more { display: contents; }
@@ -113,9 +113,15 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
   .acc .mod .short { font-size: .76rem; text-align: center; line-height: 1.25; }
   .acc .mod:not(.open):hover { background: rgba(255,255,255,.4); }
   .acc .file { font-size: .72rem; color: var(--faint); margin-top: .3rem; }
+  .acc .mod.open > :not(.ic), .acc .mod.open > .more > * { animation: fadein .3s ease .1s both; }
+  .how { overflow: hidden; transition: height .3s ease; }
+  .how.swap > * { animation: fadein .3s ease both; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(4px); } }
+  @media (prefers-reduced-motion: reduce) { .acc .mod, .how { transition: none; } .acc .mod.open > *, .acc .mod.open > .more > *, .how.swap > * { animation: none; } }
   @media (max-width: 560px) { .acc { flex-wrap: wrap; } .acc .mod.open { flex: 1 1 100%; order: -1; } }
 
-  .signs { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 2rem 0 0; }
+  h2.seealso { margin: 2.2rem 0 .6rem; font-size: .95rem; }
+  .signs { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 0; }
   .signs a { display: flex; align-items: center; gap: .8rem; padding: .75rem .9rem; border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--mod); border: 1.5px solid var(--mod-edge); }
   .signs a.demo { background: var(--blue-soft); border-color: var(--blue-edge); }
   .signs a:hover { filter: brightness(1.04); border-color: var(--accent); }
@@ -148,7 +154,8 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
     </div>
     <div class="acc" id="acc"></div>
     <div class="how" id="how"></div>
-    <nav class="signs" aria-label="Try HappyCamper">
+    <h2 class="seealso">See also</h2>
+    <nav class="signs" aria-label="See also">
       <a class="ros" id="toRosters" href="#"></a>
       <a class="demo" id="toDemo" href="#"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><div><b>In-browser demo</b><span>The quickest look at HappyCamper's core features.</span></div></a>
       <a id="toDetails" href="#"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><div><b>About</b><span>How the app is built, and how data is used.</span></div></a>
@@ -179,9 +186,16 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
     var m0 = acc.querySelector('[data-os="' + mine + '"]');
     m0.classList.add("mine");
     m0.querySelector(".badge").textContent = "Suggested for you";
+    var how = document.getElementById("how");
+    how.addEventListener("transitionend", function (e) { if (e.target === how) how.style.height = ""; });
     function show(id) {
       acc.querySelectorAll(".mod").forEach(function (m) { m.classList.toggle("open", m.dataset.os === id); });
-      document.getElementById("how").innerHTML = K.band(DL, DL.byId(id));
+      var first = !how.innerHTML, from = how.offsetHeight;
+      how.innerHTML = K.band(DL, DL.byId(id));
+      if (first) return;
+      how.classList.remove("swap"); void how.offsetWidth; how.classList.add("swap");
+      var to = how.offsetHeight;
+      if (to !== from) { how.style.height = from + "px"; void how.offsetHeight; how.style.height = to + "px"; }
     }
     wire(acc, show);
     show(mine);
