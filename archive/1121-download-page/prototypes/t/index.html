@@ -120,7 +120,12 @@
     m0.querySelector(".badge").textContent = "Suggested for you";
     var how = document.getElementById("how");
     how.addEventListener("transitionend", function (e) { if (e.target === how) how.style.height = ""; });
+    var wide = window.matchMedia("(min-width: 561px)"), hold;
     function show(id) {
+      if (how.innerHTML && wide.matches) {
+        acc.style.height = acc.offsetHeight + "px";
+        clearTimeout(hold); hold = setTimeout(function () { acc.style.height = ""; }, 350);
+      }
       acc.querySelectorAll(".mod").forEach(function (m) { m.classList.toggle("open", m.dataset.os === id); });
       var first = !how.innerHTML, from = how.offsetHeight;
       how.innerHTML = K.band(DL, DL.byId(id));
