@@ -195,7 +195,8 @@
   .bar nav a:hover { background: rgba(255,255,255,.15); }
   .bar nav span { color: #1a672c; background: #fff; border: 1px solid #fff; }
   @media (max-width: 520px) { .bar .home span { display: none; } .bar nav a, .bar nav span { padding: .25rem .6rem; } }
-  .signs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .7rem; margin: 2.5rem 0 0; text-align: left; }
+  h2.seealso { margin: 2.2rem 0 .6rem; font-size: .95rem; text-align: left; }
+  .signs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .7rem; margin: 0; text-align: left; }
   .signs a { display: flex; align-items: center; gap: .8rem; padding: .75rem .9rem; border-radius: 12px; text-decoration: none; color: #26302a; background: #e6f1e2; border: 1.5px solid #a3c49b; }
   .signs a.demo { background: #dfeaf6; border-color: #9ab8dc; }
   .signs a:hover { filter: brightness(1.04); border-color: #1a672c; }
@@ -281,7 +282,8 @@
       </div>
       <div id="newPanel" role="region" aria-labelledby="newHead"></div>
     </section>
-    <nav class="signs" aria-label="HappyCamper pages">
+    <h2 class="seealso">See also</h2>
+    <nav class="signs" aria-label="See also">
       <a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12,3 V15 M7,10.5 L12,15.5 L17,10.5" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4,17 V20 H20 V17" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Download the Java app</b><span>Bundled distributions and sample data</span></div></a>
       <a href="details.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12,2 L20,5 V11 Q20,18 12,22 Q4,18 4,11 V5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5,12 L11,14.5 L15.5,9.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>About</b><span>How the app is built, and how data is used.</span></div></a>
     </nav>

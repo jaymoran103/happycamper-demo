@@ -27,7 +27,8 @@ SHARED_CSS = '''
   .bar nav a:hover { background: rgba(255,255,255,.15); }
   .bar nav span { color: #1a672c; background: #fff; border: 1px solid #fff; }
   @media (max-width: 520px) { .bar .home span { display: none; } .bar nav a, .bar nav span { padding: .25rem .6rem; } }
-  .signs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .7rem; margin: 2.5rem 0 0; text-align: left; }
+  h2.seealso { margin: 2.2rem 0 .6rem; font-size: .95rem; text-align: left; }
+  .signs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .7rem; margin: 0; text-align: left; }
   .signs a { display: flex; align-items: center; gap: .8rem; padding: .75rem .9rem; border-radius: 12px; text-decoration: none; color: #26302a; background: #e6f1e2; border: 1.5px solid #a3c49b; }
   .signs a.demo { background: #dfeaf6; border-color: #9ab8dc; }
   .signs a:hover { filter: brightness(1.04); border-color: #1a672c; }
@@ -64,7 +65,7 @@ def signs(keys, href):
         cls, ic, title, line = BOX[k]
         out.append('      <a%s href="%s"><svg viewBox="0 0 24 24" aria-hidden="true">%s</svg><div><b>%s</b><span>%s</span></div></a>\n'
                    % (' class="%s"' % cls if cls else '', href[k], ICON[ic], title, line))
-    return '    <nav class="signs" aria-label="HappyCamper pages">\n' + ''.join(out) + '    </nav>\n'
+    return '    <h2 class="seealso">See also</h2>\n    <nav class="signs" aria-label="See also">\n' + ''.join(out) + '    </nav>\n'
 
 FOOTER = '  <footer class="sitefoot">\n    <div>A free app created by <a href="https://github.com/jaymoran103">Jay Moran</a></div>\n  </footer>\n'
 HREF = {'download': 'index.html', 'demo': 'demo.html', 'details': 'details.html'}
