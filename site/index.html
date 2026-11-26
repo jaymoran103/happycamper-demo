@@ -108,6 +108,7 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
   .acc .mod.open { flex: 4; padding: 1.1rem .7rem .8rem; cursor: default; border-color: var(--accent); }
   .acc .mod .more, .acc .mod .full, .acc .mod.open .short { display: none; }
   .acc .mod.open .more { display: contents; }
+  .acc .mod.open .badge { display: block; }
   .acc .mod.open .full { display: block; }
   .acc .mod .short { font-size: .76rem; text-align: center; line-height: 1.25; }
   .acc .mod:not(.open):hover { background: rgba(255,255,255,.4); }
@@ -130,9 +131,6 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
   .acc .mod.mine.open { box-shadow: 0 0 0 5px rgba(26,103,44,.2); }
   .acc .mod.mine:not(.open) { border: 2px dashed var(--accent); }
   .acc .mod .badge { font-size: .66rem; padding: .05rem .6rem; }
-  .acc .guess { display: flex; align-items: center; gap: .3rem; margin-top: .55rem; font-size: .7rem; color: var(--faint); }
-  .acc .guess .ic { width: 13px; height: 13px; color: var(--accent); }
-  .acc .mod:not(.open) .guess { display: none; }
   .signs { grid-template-columns: repeat(3, 1fr); }
   .signs a.ros .csv { flex: none; width: 26px; height: 31px; }
   @media (max-width: 720px) { .signs { grid-template-columns: 1fr; } }
@@ -181,7 +179,6 @@ ol.strip .gate .pic { outline: 2px solid #f0b429; }
     var m0 = acc.querySelector('[data-os="' + mine + '"]');
     m0.classList.add("mine");
     m0.querySelector(".badge").textContent = "Suggested for you";
-    m0.querySelector("span.more").insertAdjacentHTML("beforeend", '<span class="guess">' + DL.svg("i-chip") + "Recommended for you</span>");
     function show(id) {
       acc.querySelectorAll(".mod").forEach(function (m) { m.classList.toggle("open", m.dataset.os === id); });
       document.getElementById("how").innerHTML = K.band(DL, DL.byId(id));
